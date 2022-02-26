@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class TradeGood : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   public enum TradeGoodValues
+   {
+       FISH=5,
+       SHEEP=10,
+       CATTLE=15,
+       IRON=20,
+       LUMBER=20
+   }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
