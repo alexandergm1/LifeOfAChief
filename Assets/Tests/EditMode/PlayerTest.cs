@@ -10,6 +10,12 @@ public class PlayerTest
     [Test]
     public void PlayerTestSimplePasses()
     {
+        Player player;
+        player = new Player("Jack", 15F, "McEwan", 13, 16);
+
+        Assert.AreEqual("Jack", player.Name);
+
+        
         // Use the Assert class to test conditions
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    string Name { get; set; }
+    public string Name { get; set; }
     float Gold { get; set; }
     string Clan { get; set; }
     int Food { get; set; }
@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
         this.Food = Food;
         this.Lumber = Lumber;
     }
+
+
 
 
     
