@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    string Name { get; set; }
+    float Gold { get; set; }
+    string Clan { get; set; }
+    int Food { get; set; }
+    int Lumber { get; set; }
+
+    public Player(string Name, float Gold, string Clan, int Food, int Lumber){
+        this.Name = Name;
+        this.Gold = Gold;
+        this.Clan = Clan;
+        this.Food = Food;
+        this.Lumber = Lumber;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+    
+
 }
