@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.36516693, g: 0.3939622, b: 0.40339386, a: 1}
+  m_IndirectSpecularColor: {r: 0.36516663, g: 0.3939613, b: 0.40339333, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -133,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 141618, guid: f73fae749efc8124aafa10e5d7d63133, type: 3}
       propertyPath: m_Name
       value: Tower_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 141618, guid: f73fae749efc8124aafa10e5d7d63133, type: 3}
+      propertyPath: m_TagString
+      value: Clickable
       objectReference: {fileID: 0}
     - target: {fileID: 414196, guid: f73fae749efc8124aafa10e5d7d63133, type: 3}
       propertyPath: m_RootOrder
@@ -530,6 +534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Top_a
       objectReference: {fileID: 0}
+    - target: {fileID: 157550, guid: c3dde025de9d13848819a29f2acc8b5b, type: 3}
+      propertyPath: m_TagString
+      value: Clickable
+      objectReference: {fileID: 0}
     - target: {fileID: 426808, guid: c3dde025de9d13848819a29f2acc8b5b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -588,6 +596,69 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3dde025de9d13848819a29f2acc8b5b, type: 3}
+--- !u!1 &1658462659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 141618, guid: f73fae749efc8124aafa10e5d7d63133, type: 3}
+  m_PrefabInstance: {fileID: 129265376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1658462663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658462659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef12099a006d0a448c0788cdcf40cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1757304334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1757304335}
+  - component: {fileID: 1757304336}
+  m_Layer: 0
+  m_Name: HoverOverBuilding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1757304335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757304334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 300.96185, y: 6.526288, z: 625.6381}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1757304336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757304334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843ee0df54c1f440785c6d519f2bdd1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectableTag: Clickable
+  highlightedMaterial: {fileID: 2100000, guid: 2b7fecfc9c9646e4f8255f0ad4681d03, type: 2}
+  defaultMaterial: {fileID: 0}
 --- !u!1 &1780270892
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +704,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1826408133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 157550, guid: c3dde025de9d13848819a29f2acc8b5b, type: 3}
+  m_PrefabInstance: {fileID: 1580018826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1826408137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826408133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef12099a006d0a448c0788cdcf40cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1836378512
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,9 +806,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2014496666}
+  - component: {fileID: 2014496668}
+  - component: {fileID: 2014496667}
+  - component: {fileID: 2014496669}
   m_Layer: 0
   m_Name: Castle
-  m_TagString: Untagged
+  m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -733,7 +824,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014496665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 564.14, y: -171.5, z: 760.4}
+  m_LocalPosition: {x: 564.4, y: -172.7, z: 753.7}
   m_LocalScale: {x: 2.3114324, y: 2.8145087, z: 2.3103728}
   m_Children:
   - {fileID: 418840532}
@@ -741,6 +832,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2014496667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014496665}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef12099a006d0a448c0788cdcf40cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2014496668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014496665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 66.41528, z: 95.687386}
+  m_Center: {x: 0, y: -16.792336, z: 2.1562903}
+--- !u!64 &2014496669
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014496665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!4 &2077169902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 426808, guid: c3dde025de9d13848819a29f2acc8b5b, type: 3}
