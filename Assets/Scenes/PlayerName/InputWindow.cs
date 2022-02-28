@@ -12,7 +12,7 @@ public class InputWindow : MonoBehaviour
 
     public void submit(){
         Debug.Log("Player Name is:" + playerName.text);
-        GameSettings.playerNameStr = playerName.text;
+        intro.playerNameStr = playerName.text;
         SceneManager.LoadScene("Intro");
     }
 }
