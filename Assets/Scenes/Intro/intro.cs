@@ -15,13 +15,11 @@ public class intro : MonoBehaviour
 
     void Awake() {
         player = Player.InitializePlayer(playerNameStr);
-        playerName.text = player.Name;
-        lumber.text = player.Lumber.ToString();
     }
 
     // Update is called once per frame
 
-    public void submit(){
+    public void loadGame(){
         GameSettings.player = player;
         SceneManager.LoadScene("GameMap");
     }
