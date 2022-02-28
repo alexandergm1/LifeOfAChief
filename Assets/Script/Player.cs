@@ -31,6 +31,10 @@ public struct Player
         return new Player(name);
     }
 
+    public void IncreaseGold(float amount){
+        this.Gold += amount;
+    }
+
 
 
 
