@@ -6,17 +6,31 @@ using UnityEngine.TestTools;
 
 public class PlayerTest
 {
+    Player player;
+
+    [SetUp]
+    public void Setup(){
+        player = Player.InitializePlayer("Jack");
+
+    }
     // A Test behaves as an ordinary method
     [Test]
     public void PlayerTestSimplePasses()
     {
-        Player player;
-        player = new Player("Jack", 15F, "McEwan", 13, 16);
+    
 
         Assert.AreEqual("Jack", player.Name);
 
         
         // Use the Assert class to test conditions
+    }
+    [Test]
+    public void CanSetGold(){
+
+        player.Gold = 15F;
+        Assert.AreEqual(15F, player.Gold);
+
+
     }
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
