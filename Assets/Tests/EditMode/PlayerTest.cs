@@ -6,14 +6,27 @@ using UnityEngine.TestTools;
 
 public class PlayerTest
 {
-    Player player;
+    Player player, player2;
+    
 
     [SetUp]
     public void Setup(){
         player = Player.InitializePlayer("Jack");
+        player2 = Player.InitializePlayer("Ron");
 
     }
     // A Test behaves as an ordinary method
+    [Test]
+    public void PlayerTestSecondPlayer()
+    {
+    
+
+        Assert.AreEqual("Ron", player2.Name);
+
+        
+        // Use the Assert class to test conditions
+    }
+
     [Test]
     public void PlayerTestSimplePasses()
     {

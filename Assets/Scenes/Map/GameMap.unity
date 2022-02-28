@@ -596,23 +596,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3dde025de9d13848819a29f2acc8b5b, type: 3}
---- !u!1 &1658462659 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 141618, guid: f73fae749efc8124aafa10e5d7d63133, type: 3}
-  m_PrefabInstance: {fileID: 129265376}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1658462663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1658462659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ef12099a006d0a448c0788cdcf40cf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1757304334
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,23 +687,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1826408133 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 157550, guid: c3dde025de9d13848819a29f2acc8b5b, type: 3}
-  m_PrefabInstance: {fileID: 1580018826}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1826408137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826408133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ef12099a006d0a448c0788cdcf40cf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1836378512
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,7 +773,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2014496666}
   - component: {fileID: 2014496668}
-  - component: {fileID: 2014496667}
   - component: {fileID: 2014496669}
   m_Layer: 0
   m_Name: Castle
@@ -832,18 +797,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2014496667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014496665}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ef12099a006d0a448c0788cdcf40cf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2014496668
 BoxCollider:
   m_ObjectHideFlags: 0

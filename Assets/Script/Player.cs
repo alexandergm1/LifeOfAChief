@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct Player
+public class Player
 {
     public string Name { get; set; }
     public float Gold { get; set; }
