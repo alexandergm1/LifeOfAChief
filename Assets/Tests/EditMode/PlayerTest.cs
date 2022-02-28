@@ -32,6 +32,23 @@ public class PlayerTest
 
 
     }
+    [Test]
+    public void CanIncreaseGold(){
+
+        player.Gold = 15F;
+        player.Gold += 5F;
+        Assert.AreEqual(20F, player.Gold);
+    }
+
+    [Test]
+    public void CanIncreaseGoldUsingMethod(){
+
+        player.Gold = 15F;
+        player.IncreaseGold(5F);
+        Assert.AreEqual(20F, player.Gold);
+    }
+
+
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
