@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class intro : MonoBehaviour
 {
@@ -19,8 +20,9 @@ public class intro : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+
+    public void submit(){
+        GameSettings.player = player;
+        SceneManager.LoadScene("GameMap");
     }
 }
