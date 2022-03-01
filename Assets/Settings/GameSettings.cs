@@ -19,11 +19,14 @@ public class GameSettings : MonoBehaviour
         ClickBuilding.player = player;
     }
 
+    public void MainEndTurn(){
+        gameState.EndTurn();
+    }
+
     void Update()
     {
         Name.text = player.Name.ToString();
         Gold.text = player.Gold.ToString();
         Lumber.text = player.Lumber.ToString();
-
     }
 }
