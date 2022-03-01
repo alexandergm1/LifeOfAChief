@@ -15,6 +15,7 @@ public class GameSettings : MonoBehaviour
     void Start(){
         player = Player.InitializePlayer(playerNameStr);
         ClickBuilding.player = player;
+        // GameState.player = player;
     }
 
     void Update()
