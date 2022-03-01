@@ -7,12 +7,15 @@ using UnityEngine.TestTools;
 public class PlayerTest
 {
     Player player, player2;
+    Village village, village2;
     
 
     [SetUp]
     public void Setup(){
         player = Player.InitializePlayer("Jack");
         player2 = Player.InitializePlayer("Ron");
+        village = Village.InitializeVillage("Limeric", TradeGood.SEALS);
+        village2 = Village.InitializeVillage("Tukums", TradeGood.LUMBER);
 
     }
     // A Test behaves as an ordinary method
@@ -59,6 +62,19 @@ public class PlayerTest
         player.Gold = 15F;
         player.IncreaseGold(5F);
         Assert.AreEqual(20F, player.Gold);
+    }
+    [Test]
+    public void HasEmptyListOfVillages(){
+        Assert.AreEqual(0, player.villages.Count);
+
+    }
+
+    [Test]
+    public void CanAddVillage(){
+        player.AddVillage(village);
+        player.AddVillage(village2);
+        Assert.AreEqual(2, player.villages.Count);
+        Assert.AreEqual("Tukums", player.villages[1].Name);
     }
 
 

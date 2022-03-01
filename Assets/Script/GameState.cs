@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameState
 {
-    public int Turn;
+    public int Turn { get; set; }
 
     public GameState(){
         this.Turn = 0;
@@ -12,5 +12,10 @@ public class GameState
 
     public static GameState InitializeGameState(){
         return new GameState();
+    }
+
+    public void EndTurn(Player player){
+        this.Turn += 1;
+        player.CollectIncome();
     }
 }
