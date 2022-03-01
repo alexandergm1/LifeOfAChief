@@ -5,16 +5,10 @@ using UnityEngine;
 public class ClickBuilding : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Player player;
     public Castle castle;
+    public static Player player;
     void Start()
     {
-        
-
-
-       
-        
-        player = Player.InitializePlayer("Patrick");
         castle = Castle.InitializeCastle("Edin Castle");
     }
 
@@ -22,9 +16,6 @@ public class ClickBuilding : MonoBehaviour
         Debug.Log("Object was clicked");
         castle.PayPlayer(player, 10F);
         Debug.Log(player.Gold);
-        
-
-
     }
 
     // Update is called once per frame
