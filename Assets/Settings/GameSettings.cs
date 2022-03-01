@@ -6,20 +6,22 @@ using UnityEngine.UI;
 public class GameSettings : MonoBehaviour
 {
 
-    public static Player player;
-    public static Text Name;
+    public static string playerNameStr;
+    public Text Name;
     public Text Lumber;
     public Text Gold;
+    public static Player player;
 
-    void Awake(){
-        Name.text = player.Name;
-        Lumber.text = player.Lumber.ToString();
-        Gold.text = player.Gold.ToString();
+    void Start(){
+        player = Player.InitializePlayer(playerNameStr);
+        ClickBuilding.player = player;
     }
 
-    void update()
+    void Update()
     {
-        Lumber.text = player.Lumber.ToString();
+        Name.text = player.Name.ToString();
         Gold.text = player.Gold.ToString();
+        Lumber.text = player.Lumber.ToString();
+
     }
 }

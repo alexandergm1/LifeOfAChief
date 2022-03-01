@@ -11,8 +11,7 @@ public class InputWindow : MonoBehaviour
     public InputField playerName;
 
     public void submit(){
-        Debug.Log("Player Name is:" + playerName.text);
-        intro.playerNameStr = playerName.text;
+        GameSettings.playerNameStr = playerName.text;
         SceneManager.LoadScene("Intro");
     }
 }
