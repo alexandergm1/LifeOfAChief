@@ -11,11 +11,12 @@ public class GameSettings : MonoBehaviour
     public Text Lumber;
     public Text Gold;
     public static Player player;
+    public static GameState gameState;
 
     void Start(){
         player = Player.InitializePlayer(playerNameStr);
+        gameState = GameState.InitializeGameState(player);
         ClickBuilding.player = player;
-        GameState.player = player;
     }
 
     void Update()
