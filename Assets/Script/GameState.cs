@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
+    public static Player player;
+
+    void Start() {
+    }
+
+
     public int Turn { get; set; }
 
     public GameState(){
@@ -14,7 +20,7 @@ public class GameState : MonoBehaviour
         return new GameState();
     }
 
-    public void EndTurn(Player player){
+    public void EndTurn(){
         this.Turn += 1;
         player.CollectIncome();
     }
