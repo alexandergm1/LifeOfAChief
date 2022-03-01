@@ -15,7 +15,7 @@ public class Village
         this.Population = population;
         this.tradeGood = tradeGood;
         this.UpgradeLevel = UpgradeLevel;
-        this.UpgradeCounter = UpgradeCounter
+        this.UpgradeCounter = UpgradeCounter;
     }
 
     private Village(string name, TradeGood tradeGood){
@@ -35,17 +35,11 @@ public class Village
     }
 
     public int CalculatePopTax(){
-        return (int)(this.Population * 0.1 * ((this.UpgradeLevel * 0.2) + 1)) ;
+        return (int)(this.Population * 0.1 * ((this.UpgradeLevel * 0.2) + 1));
     }
 
     public void StartUpgradeVillage(){
         this.UpgradeCounter += 3;
-    }
-
-    // public float CalculateResourceTax(){
-    //     if (this.tradeGood != TradeGood.LUMBER)
-    // }
-
-    
+    }    
 
 }
