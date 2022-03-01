@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameState : MonoBehaviour
+public class GameState
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public ArrayList<Village> Villages;
+    public int Turn;
+
+    public GameState(){
+        this.Villages = new ArrayList();
+        this.Turn = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private GameState(){
+        this.Villages = new ArrayList();
+        this.Turn = 0;
+    }
+
+    public static GameState InitializeGameState(){
+            return new GameState();
     }
 }
