@@ -775,9 +775,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 783132961}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e51bdc032e4da3746bcbf7f6eedd6971, type: 3}
+  m_Script: {fileID: 11500000, guid: 574190be26077494684fc01cad6b1b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: {fileID: 0}
+  Lumber: {fileID: 0}
+  Gold: {fileID: 0}
 --- !u!850595691 &962256730
 LightingSettings:
   m_ObjectHideFlags: 0

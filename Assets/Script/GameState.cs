@@ -24,6 +24,7 @@ public class GameState : MonoBehaviour
     public void EndTurn(){
         this.Turn += 1;
         this.player.CollectIncome();
+        this.player.Gold += 50;
     }
 
     public void AdjustPopulationOnTurnEnd(){
