@@ -11,7 +11,8 @@ public class Player
     public int Lumber { get; set; }
     public List<Village> villages { get; set; }
 
-    public Player(string name, float gold, string clan, int food, int lumber){
+    public Player(string name, float gold, string clan, int food, int lumber)
+    {
         this.Name = name;
         this.Gold = gold;
         this.Clan = clan;
@@ -20,7 +21,8 @@ public class Player
         this.villages = new List<Village>();
     }
 
-    private Player(string name){
+    private Player(string name)
+    {
         this.Name = name;
         this.Gold = 0;
         this.Clan = "";
@@ -30,28 +32,49 @@ public class Player
 
     }
 
-    public static Player InitializePlayer(string name){
+    public static Player InitializePlayer(string name)
+    {
         return new Player(name);
     }
 
-    public void IncreaseGold(float amount){
+    public void IncreaseGold(float amount)
+    {
         this.Gold += amount;
     }
 
-    public void AddVillage(Village village){
+    public void AddVillage(Village village)
+    {
         this.villages.Add(village);
     }
 
-    public void CollectIncome(){
-        foreach (Village village in this.villages){
-            this.Gold += village.CalculatePopTax();
-        }
-        
+    public void CollectTotalIncome()
+    {
+        this.CollectTaxIncome();
+        this.CollectResourceIncome();
+        this.CollectLumberIncome();
     }
 
+    public void CollectTaxIncome()
+    {
+        foreach (Village village in this.villages)
+        {
+            this.Gold += village.CalculatePopTax();
+        }
+    }
 
+    public void CollectResourceIncome()
+    {
+        foreach (Village village in this.villages)
+        {
+            this.Gold += village.CalculateResourceIncome();
+        }
+    }
 
-
-    
-
+    public void CollectLumberIncome()
+    {
+        foreach (Village village in this.villages)
+        {
+            this.Lumber += village.CalculateLumberIncome();
+        }
+    }
 }

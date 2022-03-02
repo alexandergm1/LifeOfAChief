@@ -16,76 +16,74 @@ public class PlayerTest
         player2 = Player.InitializePlayer("Ron");
         village = Village.InitializeVillage("Limeric", TradeGood.SEALS);
         village2 = Village.InitializeVillage("Tukums", TradeGood.LUMBER);
-
     }
-    // A Test behaves as an ordinary method
+
     [Test]
     public void PlayerTestSecondPlayer()
     {
-    
-
         Assert.AreEqual("Ron", player2.Name);
-
-        
-        // Use the Assert class to test conditions
     }
 
     [Test]
     public void PlayerTestSimplePasses()
     {
-    
-
         Assert.AreEqual("Jack", player.Name);
-
-        
-        // Use the Assert class to test conditions
     }
     [Test]
-    public void CanSetGold(){
-
+    public void CanSetGold()
+    {
         player.Gold = 15F;
         Assert.AreEqual(15F, player.Gold);
-
-
     }
     [Test]
-    public void CanIncreaseGold(){
-
+    public void CanIncreaseGold()
+    {
         player.Gold = 15F;
         player.Gold += 5F;
         Assert.AreEqual(20F, player.Gold);
     }
 
     [Test]
-    public void CanIncreaseGoldUsingMethod(){
-
+    public void CanIncreaseGoldUsingMethod()
+    {
         player.Gold = 15F;
         player.IncreaseGold(5F);
         Assert.AreEqual(20F, player.Gold);
     }
     [Test]
-    public void HasEmptyListOfVillages(){
+    public void HasEmptyListOfVillages()
+    {
         Assert.AreEqual(0, player.villages.Count);
-
     }
 
     [Test]
-    public void CanAddVillage(){
+    public void CanAddVillage()
+    {
         player.AddVillage(village);
         player.AddVillage(village2);
         Assert.AreEqual(2, player.villages.Count);
         Assert.AreEqual("Tukums", player.villages[1].Name);
     }
 
-
-
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator PlayerTestWithEnumeratorPasses()
+    [Test]
+    public void CanCollectLumberIncome()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        player.AddVillage(village);
+        player.AddVillage(village2);
+        village.Population += 400;
+        village2.Population += 200;
+        player.CollectTotalIncome();
+        Assert.AreEqual(1000, player.Lumber);
+    }
+
+    [Test]
+    public void CanCollectGoldIncome()
+    {
+        player.AddVillage(village);
+        player.AddVillage(village2);
+        village.Population += 400;
+        village2.Population += 200;
+        player.CollectTotalIncome();
+        Assert.AreEqual(1000, player.Gold);
     }
 }

@@ -26,20 +26,34 @@ public class Village
         this.UpgradeCounter = 0;
     }
 
-    public static Village InitializeVillage(string name, TradeGood tradeGood){
+    public static Village InitializeVillage(string name, TradeGood tradeGood)
+    {
         return new Village(name, tradeGood);
     }
 
-    public void PayPlayer(Player player, float amount){
+    public void PayPlayer(Player player, float amount)
+    {
         player.IncreaseGold(amount);
     }
 
-    public int CalculatePopTax(){
+    public int CalculatePopTax()
+    {
         return (int)(this.Population * 0.1 * ((this.UpgradeLevel * 0.2) + 1));
     }
 
-    public void StartUpgradeVillage(){
+    public int CalculateResourceIncome()
+    {
+        return (int) (this.tradeGood != TradeGood.LUMBER ? (int) (this.Population * 0.5 * (int) this.tradeGood) * ((this.UpgradeLevel * 0.2) + 1) : (int) 0);
+    }  
+
+    public int CalculateLumberIncome()
+    {
+        return (int) (this.tradeGood == TradeGood.LUMBER ? (int) (this.Population * 0.3 * ((this.UpgradeLevel * 0.2) + 1)) : (int) 0);
+    }      
+
+    public void StartUpgradeVillage()
+    {
         this.UpgradeCounter += 3;
-    }    
+    }  
 
 }

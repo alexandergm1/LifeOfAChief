@@ -11,8 +11,9 @@ public class GameStateTest
     GameState gameState;
 
 
-     [SetUp]
-        public void Setup(){
+    [SetUp]
+    public void Setup()
+    {
         player = Player.InitializePlayer("Jack");
         player2 = Player.InitializePlayer("Ron");
         village = Village.InitializeVillage("Limeric", TradeGood.SEALS);
@@ -22,31 +23,19 @@ public class GameStateTest
         player.AddVillage(village);
         player.AddVillage(village2);
         gameState = GameState.InitializeGameState(player);
-
     }
-    // A Test behaves as an ordinary method
+
     [Test]
     public void TestEndTurn()
     {
         gameState.EndTurn();
         Assert.AreEqual(30, player.Gold);
         Assert.AreEqual(1, gameState.Turn);
-        
     }
     [Test]
     public void TestAdjustPopulation()
     {
         gameState.AdjustPopulationOnTurnEnd();
         Assert.AreNotEqual(100, player.villages[0].Population);
-    }
-
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator GameStateTestWithEnumeratorPasses()
-    {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
     }
 }
