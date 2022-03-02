@@ -39,19 +39,19 @@ public class VillageTest : MonoBehaviour
     }
 
     [Test]
-    public void VillageUpgradeLevelAffectsTax(){
+    public void VillageUpgradeLevelAffectsTax()
+    {
         village.UpgradeLevel += 4;
         village.Population += 1000;
         Assert.AreEqual(180, village.CalculatePopTax());
     }
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator CastleTestWithEnumeratorPasses()
+    [Test]
+    public void canSetVillageTax()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        village.Tax = 20;
+        village.Population = 1000;
+        Assert.AreEqual(200, village.CalculatePopTax());
     }
+
 }

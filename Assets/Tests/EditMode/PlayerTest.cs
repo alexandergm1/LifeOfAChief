@@ -73,7 +73,7 @@ public class PlayerTest
         village.Population += 400;
         village2.Population += 200;
         player.CollectTotalIncome();
-        Assert.AreEqual(1000, player.Lumber);
+        Assert.AreEqual(160, player.Lumber);
     }
 
     [Test]
@@ -84,6 +84,6 @@ public class PlayerTest
         village.Population += 400;
         village2.Population += 200;
         player.CollectTotalIncome();
-        Assert.AreEqual(1000, player.Gold);
+        Assert.AreEqual(2060, player.Gold);
     }
 }

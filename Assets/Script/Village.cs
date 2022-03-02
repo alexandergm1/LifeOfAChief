@@ -9,6 +9,7 @@ public class Village
     public TradeGood tradeGood{get; set;}
     public int UpgradeLevel{get; set;}
     public int UpgradeCounter {get; set;}
+    public int Tax { get; set;}
 
     public Village(string name, int population, TradeGood tradeGood, int UpgradeLevel, int UpgradeCounter){
         this.Name = name;
@@ -16,6 +17,7 @@ public class Village
         this.tradeGood = tradeGood;
         this.UpgradeLevel = UpgradeLevel;
         this.UpgradeCounter = UpgradeCounter;
+        this.Tax = 0;
     }
 
     private Village(string name, TradeGood tradeGood){
@@ -24,6 +26,7 @@ public class Village
         this.tradeGood = tradeGood;
         this.UpgradeLevel = 0;
         this.UpgradeCounter = 0;
+        this.Tax = 10;
     }
 
     public static Village InitializeVillage(string name, TradeGood tradeGood)
@@ -38,7 +41,7 @@ public class Village
 
     public int CalculatePopTax()
     {
-        return (int)(this.Population * 0.1 * ((this.UpgradeLevel * 0.2) + 1));
+        return (int)(this.Population * ((float) this.Tax/100) * ((this.UpgradeLevel * 0.2) + 1));
     }
 
     public int CalculateResourceIncome()
