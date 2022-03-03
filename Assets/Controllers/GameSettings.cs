@@ -23,6 +23,7 @@ public class GameSettings : MonoBehaviour
         player.TakeControlOfCastleFromMap(map, "Dunvegan");
         gameState = GameState.InitializeGameState(player);
         ClickBuilding.player = player;
+        Name.text = player.Name.ToString();
     }
 
     public void MainEndTurn(){
@@ -31,7 +32,6 @@ public class GameSettings : MonoBehaviour
 
     void Update()
     {
-        Name.text = player.Name.ToString();
         Gold.text = player.Gold.ToString();
         Lumber.text = player.Lumber.ToString();
     }
