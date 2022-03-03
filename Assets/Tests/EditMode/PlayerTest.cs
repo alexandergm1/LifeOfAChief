@@ -8,7 +8,7 @@ public class PlayerTest
 {
     Player player, player2;
     Village village, village2;
-    
+    Map map;
 
     [SetUp]
     public void Setup(){
@@ -16,6 +16,7 @@ public class PlayerTest
         player2 = Player.InitializePlayer("Ron");
         village = Village.InitializeVillage("Limeric", TradeGood.SEALS);
         village2 = Village.InitializeVillage("Tukums", TradeGood.LUMBER);
+        map = Map.InitializeMap();
     }
 
     [Test]
@@ -51,9 +52,9 @@ public class PlayerTest
         Assert.AreEqual(20F, player.Gold);
     }
     [Test]
-    public void Has3StartingVillages()
+    public void Has0StartingVillages()
     {
-        Assert.AreEqual(3, player.villages.Count);
+        Assert.AreEqual(0, player.villages.Count);
     }
 
     [Test]
@@ -61,8 +62,8 @@ public class PlayerTest
     {
         player.AddVillage(village);
         player.AddVillage(village2);
-        Assert.AreEqual(5, player.villages.Count);
-        Assert.AreEqual("Tukums", player.villages[4].Name);
+        Assert.AreEqual(2, player.villages.Count);
+        Assert.AreEqual("Tukums", player.villages[1].Name);
     }
 
     [Test]
@@ -73,7 +74,7 @@ public class PlayerTest
         village.Population += 400;
         village2.Population += 200;
         player.CollectTotalIncome();
-        Assert.AreEqual(280, player.Lumber);
+        Assert.AreEqual(160, player.Lumber);
     }
 
     [Test]
@@ -84,6 +85,13 @@ public class PlayerTest
         village.Population += 400;
         village2.Population += 200;
         player.CollectTotalIncome();
-        Assert.AreEqual(5560, player.Gold);
+        Assert.AreEqual(2360, player.Gold);
+    }
+
+    [Test]
+    public void CanTakeControllOfVillageFromMap()
+    {
+        player.TakeControlOfVillageFromMap(map, "Village1");
+        Assert.AreEqual(1, player.villages.Count);
     }
 }

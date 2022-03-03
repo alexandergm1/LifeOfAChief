@@ -37,12 +37,7 @@ public class Player
 
     public static Player InitializePlayer(string name)
     {
-        Player player = new Player(name);
-        player.AddVillage(Village.InitializeVillage1());
-        player.AddVillage(Village.InitializeVillage2());
-        player.AddVillage(Village.InitializeVillage3());
-        player.AddCastle(Castle.InitializeStartingCastle());
-        return player;
+        return new Player(name);
     }
 
     public void IncreaseGold(float amount)
@@ -99,4 +94,22 @@ public class Player
             this.Gold += castle.CalculateCastleIncome();
         }
     }
+
+    public void TakeControlOfCastleFromMap(Map map, string name)
+    {
+        foreach (Castle castle in map.Castles)
+        {
+            if (name == castle.Name) this.AddCastle(castle);
+        }
+    }
+
+    public void TakeControlOfVillageFromMap(Map map, string name)
+    {
+        foreach (Village village in map.Villages)
+        {
+            if (name == village.Name) this.AddVillage(village);
+        }
+    }
+
+
 }
