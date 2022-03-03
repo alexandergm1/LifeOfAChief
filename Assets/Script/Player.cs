@@ -10,6 +10,7 @@ public class Player
     public int Food { get; set; }
     public int Lumber { get; set; }
     public List<Village> villages { get; set; }
+    public List<Castle> castles { get; set; }
 
     public Player(string name, float gold, string clan, int food, int lumber)
     {
@@ -19,16 +20,18 @@ public class Player
         this.Food = food;
         this.Lumber = lumber;
         this.villages = new List<Village>();
+        this.castles = new List<Castle>();
     }
 
     private Player(string name)
     {
         this.Name = name;
-        this.Gold = 0;
+        this.Gold = 300;
         this.Clan = "";
-        this.Food = 50;
+        this.Food = 300;
         this.Lumber = 100;
         this.villages = new List<Village>();
+        this.castles = new List<Castle>();
 
     }
 
@@ -47,11 +50,17 @@ public class Player
         this.villages.Add(village);
     }
 
+    public void AddCastle(Castle castle)
+    {
+        this.castles.Add(castle);
+    }
+
     public void CollectTotalIncome()
     {
         this.CollectTaxIncome();
         this.CollectResourceIncome();
         this.CollectLumberIncome();
+        this.CollectCastleIncome();
     }
 
     public void CollectTaxIncome()
@@ -77,4 +86,30 @@ public class Player
             this.Lumber += village.CalculateLumberIncome();
         }
     }
+
+    public void CollectCastleIncome()
+    {
+        foreach (Castle castle in this.castles)
+        {
+            this.Gold += castle.CalculateCastleIncome();
+        }
+    }
+
+    public void TakeControlOfCastleFromMap(Map map, string name)
+    {
+        foreach (Castle castle in map.Castles)
+        {
+            if (name == castle.Name) this.AddCastle(castle);
+        }
+    }
+
+    public void TakeControlOfVillageFromMap(Map map, string name)
+    {
+        foreach (Village village in map.Villages)
+        {
+            if (name == village.Name) this.AddVillage(village);
+        }
+    }
+
+
 }

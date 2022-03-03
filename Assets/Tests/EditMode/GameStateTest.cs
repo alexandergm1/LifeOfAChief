@@ -29,7 +29,7 @@ public class GameStateTest
     public void TestEndTurn()
     {
         gameState.EndTurn();
-        Assert.AreEqual(580, player.Gold);
+        Assert.AreEqual(880, player.Gold);
         Assert.AreEqual(1, gameState.Turn);
     }
     [Test]

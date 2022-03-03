@@ -11,7 +11,7 @@ public class Village
     public int UpgradeCounter {get; set;}
     public int Tax { get; set;}
 
-    public Village(string name, int population, TradeGood tradeGood, int UpgradeLevel, int UpgradeCounter){
+    public Village(string name, int population, TradeGood tradeGood, int UpgradeLevel, int UpgradeCounter, int Tax){
         this.Name = name;
         this.Population = population;
         this.tradeGood = tradeGood;
@@ -57,6 +57,22 @@ public class Village
     public void StartUpgradeVillage()
     {
         this.UpgradeCounter += 3;
-    }  
+    }
+
+    public static Village InitializeVillage1()
+    {
+        return new Village("Village1", 400, TradeGood.LUMBER, 0, 0, 10);
+    }
+
+
+    public static Village InitializeVillage2()
+    {
+        return new Village("Village2", 400, TradeGood.FISH, 0, 0, 10);
+    }
+
+    public static Village InitializeVillage3()
+    {
+        return new Village( "Village3", 400, TradeGood.SEALS, 0, 0, 10);
+    }
 
 }
