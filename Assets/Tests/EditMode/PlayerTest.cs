@@ -51,9 +51,9 @@ public class PlayerTest
         Assert.AreEqual(20F, player.Gold);
     }
     [Test]
-    public void HasEmptyListOfVillages()
+    public void Has3StartingVillages()
     {
-        Assert.AreEqual(0, player.villages.Count);
+        Assert.AreEqual(3, player.villages.Count);
     }
 
     [Test]
@@ -61,8 +61,8 @@ public class PlayerTest
     {
         player.AddVillage(village);
         player.AddVillage(village2);
-        Assert.AreEqual(2, player.villages.Count);
-        Assert.AreEqual("Tukums", player.villages[1].Name);
+        Assert.AreEqual(5, player.villages.Count);
+        Assert.AreEqual("Tukums", player.villages[4].Name);
     }
 
     [Test]
@@ -73,7 +73,7 @@ public class PlayerTest
         village.Population += 400;
         village2.Population += 200;
         player.CollectTotalIncome();
-        Assert.AreEqual(160, player.Lumber);
+        Assert.AreEqual(280, player.Lumber);
     }
 
     [Test]
@@ -84,6 +84,6 @@ public class PlayerTest
         village.Population += 400;
         village2.Population += 200;
         player.CollectTotalIncome();
-        Assert.AreEqual(2060, player.Gold);
+        Assert.AreEqual(5560, player.Gold);
     }
 }

@@ -21,11 +21,26 @@ public class Castle
         this.Soldiers = 0;
     }
 
-    public static Castle InitializeCastle(string name){
+    public static Castle InitializeCastle(string name)
+    {
         return new Castle(name);
     }
 
-    public void PayPlayer(Player player, float amount){
+    public void PayPlayer(Player player, float amount)
+    {
         player.IncreaseGold(amount);
+    }
+
+    public static Castle InitializeStartingCastle()
+    {
+        Castle startCastle = new Castle("Dunvegan");
+        startCastle.Population = 2000;
+        startCastle.Soldiers = 200;
+        return startCastle;
+    }
+
+    public int CalculateCastleIncome()
+    {
+        return (int) ((double) this.Population * 0.1);
     }
 }

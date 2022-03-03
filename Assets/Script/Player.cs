@@ -10,6 +10,7 @@ public class Player
     public int Food { get; set; }
     public int Lumber { get; set; }
     public List<Village> villages { get; set; }
+    public List<Castle> castles { get; set; }
 
     public Player(string name, float gold, string clan, int food, int lumber)
     {
@@ -19,22 +20,29 @@ public class Player
         this.Food = food;
         this.Lumber = lumber;
         this.villages = new List<Village>();
+        this.castles = new List<Castle>();
     }
 
     private Player(string name)
     {
         this.Name = name;
-        this.Gold = 0;
+        this.Gold = 300;
         this.Clan = "";
-        this.Food = 50;
+        this.Food = 300;
         this.Lumber = 100;
         this.villages = new List<Village>();
+        this.castles = new List<Castle>();
 
     }
 
     public static Player InitializePlayer(string name)
     {
-        return new Player(name);
+        Player player = new Player(name);
+        player.AddVillage(Village.InitializeVillage1());
+        player.AddVillage(Village.InitializeVillage2());
+        player.AddVillage(Village.InitializeVillage3());
+        player.AddCastle(Castle.InitializeStartingCastle());
+        return player;
     }
 
     public void IncreaseGold(float amount)
@@ -47,11 +55,17 @@ public class Player
         this.villages.Add(village);
     }
 
+    public void AddCastle(Castle castle)
+    {
+        this.castles.Add(castle);
+    }
+
     public void CollectTotalIncome()
     {
         this.CollectTaxIncome();
         this.CollectResourceIncome();
         this.CollectLumberIncome();
+        this.CollectCastleIncome();
     }
 
     public void CollectTaxIncome()
@@ -75,6 +89,14 @@ public class Player
         foreach (Village village in this.villages)
         {
             this.Lumber += village.CalculateLumberIncome();
+        }
+    }
+
+    public void CollectCastleIncome()
+    {
+        foreach (Castle castle in this.castles)
+        {
+            this.Gold += castle.CalculateCastleIncome();
         }
     }
 }

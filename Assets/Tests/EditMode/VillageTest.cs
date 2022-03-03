@@ -19,7 +19,7 @@ public class VillageTest : MonoBehaviour
     public void VillageCanPayPlayer()
     {
         village.PayPlayer(player1, 20F);
-        Assert.AreEqual(20F, player1.Gold);
+        Assert.AreEqual(320F, player1.Gold);
     }
 
     [Test]
