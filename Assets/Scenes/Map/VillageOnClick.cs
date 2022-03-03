@@ -6,17 +6,16 @@ public class VillageOnClick : MonoBehaviour
 {
     void OnMouseDown()
     {
-        Debug.Log("test");
+        Debug.Log(Map.Instance.FindVillageByName(this.gameObject.name).Name);
     }
 
     void Start()
     {
-        
+       
     }
 
 
     void Update()
     {
-        
     }
 }

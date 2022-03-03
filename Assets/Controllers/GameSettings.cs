@@ -10,9 +10,9 @@ public class GameSettings : MonoBehaviour
     public Text Name;
     public Text Lumber;
     public Text Gold;
-    public static Player player;
-    public static GameState gameState;
-    public static Map map;
+    public static Player player { get; set;}
+    public static GameState gameState { get; set;}
+    public static Map map { get; set;}
 
     void Start(){
         map = Map.InitializeMap();

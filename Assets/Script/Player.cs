@@ -11,6 +11,7 @@ public class Player
     public int Lumber { get; set; }
     public List<Village> villages { get; set; }
     public List<Castle> castles { get; set; }
+    public static Player Instance {get; private set;}
 
     public Player(string name, float gold, string clan, int food, int lumber)
     {
@@ -36,8 +37,9 @@ public class Player
     }
 
     public static Player InitializePlayer(string name)
-    {
-        return new Player(name);
+    {   
+        Instance = new Player(name);
+        return Instance;
     }
 
     public void IncreaseGold(float amount)

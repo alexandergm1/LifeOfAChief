@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameState : MonoBehaviour
+public class GameState
 {
     void Start() {
     }
@@ -10,6 +10,7 @@ public class GameState : MonoBehaviour
 
     public int Turn { get; set; }
     public Player player { get; set; }
+    public static GameState Instance { get; private set;}
 
 
     public GameState(Player player){
@@ -17,8 +18,10 @@ public class GameState : MonoBehaviour
         this.Turn = 0;
     }
 
-    public static GameState InitializeGameState(Player player){
-        return new GameState(player);
+    public static GameState InitializeGameState(Player player)
+    {
+        Instance = new GameState(player);
+        return Instance;
     }
 
     public void EndTurn(){

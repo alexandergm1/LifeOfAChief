@@ -6,6 +6,7 @@ public class Map
 {
     public List<Village> Villages { get; set;}
     public List<Castle> Castles { get; set;}
+    public static Map Instance { get; private set;}
 
     public Map()
     {
@@ -20,7 +21,8 @@ public class Map
         map.AddVillage(Village.InitializeVillage2());
         map.AddVillage(Village.InitializeVillage3());
         map.AddCastle(Castle.InitializeStartingCastle());
-        return map;
+        Instance = map;
+        return Instance;
     }
 
     public void AddCastle(Castle castle)
@@ -31,6 +33,15 @@ public class Map
     public void AddVillage(Village village)
     {
         this.Villages.Add(village);
+    }
+
+    public Village FindVillageByName(string name)
+    {
+        foreach (Village village in Villages)
+        {
+            if (village.Name == name) return village;
+        }
+        return null;
     }
 
 
