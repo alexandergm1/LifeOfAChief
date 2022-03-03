@@ -632,7 +632,6 @@ GameObject:
   - component: {fileID: 653929779}
   - component: {fileID: 653929778}
   - component: {fileID: 653929783}
-  - component: {fileID: 653929784}
   m_Layer: 0
   m_Name: Village2
   m_TagString: Untagged
