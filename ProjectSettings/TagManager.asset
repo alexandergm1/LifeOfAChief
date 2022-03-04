@@ -8,6 +8,7 @@ TagManager:
   - Village
   - BuildingSite
   - Castle
+  - Popup
   layers:
   - Default
   - TransparentFX

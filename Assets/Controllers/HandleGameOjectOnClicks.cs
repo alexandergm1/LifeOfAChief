@@ -8,7 +8,6 @@ public class HandleGameOjectOnClicks : MonoBehaviour
 
     [SerializeField] private Transform PopupWindowVillage;
     [SerializeField] private Transform panel;
-    public Village selectedVillage;
 
     void Update()
     {
@@ -19,10 +18,16 @@ public class HandleGameOjectOnClicks : MonoBehaviour
  
         if (Physics.Raycast(ray, out hit))
         {
+            GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Popup");
+            foreach(GameObject currentObject in taggedObjects){
+                Destroy(currentObject);
+            }
                  
  
             if (hit.collider.gameObject.tag == "Village")
             {
+                if (taggedObjects.Length == 0){
+
                 Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
                 Village selectedVillage = Map.Instance.FindVillageByName(hit.collider.gameObject.name);
                 Debug.Log(Map.Instance.FindVillageByName(hit.collider.gameObject.name).Name);
@@ -32,6 +37,7 @@ public class HandleGameOjectOnClicks : MonoBehaviour
                 villageName.text = selectedVillage.Name;
                 villagePop.text = selectedVillage.Population.ToString();
                 villageLevel.text = selectedVillage.UpgradeLevel.ToString();
+            }
             }
             else if (hit.collider.gameObject.tag == "Castle")
             {
