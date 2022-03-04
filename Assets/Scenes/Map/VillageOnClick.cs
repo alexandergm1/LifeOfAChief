@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class VillageOnClick : MonoBehaviour
 {
+    [SerializeField] private Transform PopupWindowVillage;
+    [SerializeField] private Transform panel;
+    public Village selectedVillage;
     void OnMouseDown()
     {
-        Debug.Log(Map.Instance.FindVillageByName(this.gameObject.name).Name);
-    }
-
-    void Start()
-    {
-
+        Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
+        Village selectedVillage = Map.Instance.FindVillageByName(this.gameObject.name);
+        Text villageName = GameObject.Find("EntityName").GetComponent<Text>();
+        villageName.text = selectedVillage.Name;
     }
 
 
