@@ -55,5 +55,21 @@ public class Map
         return null;
     }
 
+    public void EndTurnReduceConstructionTime()
+    {
+        foreach (BuildingSite buildingSite in this.BuildingSites)
+        {
+            if (buildingSite.UnderConstruction == true) buildingSite.BuildTime -= 1;
+        }
+    }
+
+    // public void EndTurnCheckBuildFinished()
+    // {
+    //     foreach (BuildingSite buildingSite in buildingSites)
+    //     {
+    //         if (buildingSite.UnderConstruction == true && buildingSite.BuildTime == 0) ????
+    //     } 
+    // }
+
 
 }

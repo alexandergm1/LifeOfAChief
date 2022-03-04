@@ -94,4 +94,14 @@ public class PlayerTest
         player.TakeControlOfVillageFromMap(map, "Village1");
         Assert.AreEqual(1, player.villages.Count);
     }
+
+    [Test]
+    public void CanBuildOnABuildingSite()
+    {
+        player.Gold = 2000;
+        player.Lumber = 2000;
+        BuildingSite buildingSite = BuildingSite.InitializeBuildingSite1();
+        player.Build(buildingSite);
+        Assert.AreEqual(true, buildingSite.UnderConstruction);
+    }
 }

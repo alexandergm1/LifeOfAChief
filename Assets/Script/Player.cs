@@ -113,5 +113,15 @@ public class Player
         }
     }
 
+    public void Build(BuildingSite buildingSite)
+    {
+        if (buildingSite.GoldCost <= this.Gold && buildingSite.LumberCost <= this.Lumber)
+        {
+            this.Gold -= buildingSite.GoldCost;
+            this.Lumber -= buildingSite.LumberCost;
+            buildingSite.UnderConstruction = true;
+        }
+    }
+
 
 }
