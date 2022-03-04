@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Popup : MonoBehaviour
 {
+    [SerializeField] private Transform PopupWindowVillage;
+    [SerializeField] private Transform panel;
 
-    GameObject popupWindow = GameObject.Find("PopupBox");
-
-    public void disableWindow(){
-        popupWindow.SetActive(false);
-    }
+    void Start(){
+       Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
+   }
 }
