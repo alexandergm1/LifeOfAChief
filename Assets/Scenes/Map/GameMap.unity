@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.36516663, g: 0.3939613, b: 0.40339333, a: 1}
+  m_IndirectSpecularColor: {r: 0.36516693, g: 0.3939622, b: 0.40339386, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -858,7 +858,6 @@ GameObject:
   - component: {fileID: 653929781}
   - component: {fileID: 653929780}
   - component: {fileID: 653929779}
-  - component: {fileID: 653929778}
   - component: {fileID: 653929783}
   m_Layer: 0
   m_Name: Village2
@@ -867,20 +866,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &653929778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653929777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e77dd5a95ac44043a885aaf17836aed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PopupWindowVillage: {fileID: 8607240500171075584, guid: c4943088ffaa9924cbd3edca276477aa, type: 3}
-  panel: {fileID: 804928545}
 --- !u!65 &653929779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3115,6 +3100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7313240e3a7549f6baf8bdb83555531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PopupWindowVillage: {fileID: 8607240500171075584, guid: c4943088ffaa9924cbd3edca276477aa, type: 3}
+  panel: {fileID: 804928545}
 --- !u!4 &2019158623
 Transform:
   m_ObjectHideFlags: 0
