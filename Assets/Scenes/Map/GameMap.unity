@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.36516663, g: 0.3939613, b: 0.40339333, a: 1}
+  m_IndirectSpecularColor: {r: 0.36516693, g: 0.3939622, b: 0.40339386, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -309,7 +309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 143.41406, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &460176724
@@ -1177,7 +1177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 247.69272, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &936267517
@@ -1686,7 +1686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 45.721355, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807967980
@@ -1912,7 +1912,6 @@ GameObject:
   - component: {fileID: 1944767147}
   - component: {fileID: 1944767146}
   - component: {fileID: 1944767145}
-  - component: {fileID: 1944767148}
   m_Layer: 5
   m_Name: EndTurn
   m_TagString: Untagged
@@ -1985,7 +1984,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1944767148}
+      - m_Target: {fileID: 1976707087}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: MainEndTurn
         m_Mode: 1
@@ -2035,21 +2034,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944767143}
   m_CullTransparentMesh: 1
---- !u!114 &1944767148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944767143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 574190be26077494684fc01cad6b1b15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: {fileID: 0}
-  Lumber: {fileID: 0}
-  Gold: {fileID: 0}
 --- !u!1 &1976707082
 GameObject:
   m_ObjectHideFlags: 0
