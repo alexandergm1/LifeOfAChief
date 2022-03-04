@@ -7,6 +7,7 @@ public class VillageOnClick : MonoBehaviour
     [SerializeField] private Transform PopupWindowVillage;
     [SerializeField] private Transform panel;
     public Village selectedVillage;
+    
     void OnMouseDown()
     {
         Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
