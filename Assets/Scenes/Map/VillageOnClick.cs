@@ -9,12 +9,17 @@ public class VillageOnClick : MonoBehaviour
     [SerializeField] private Transform panel;
     public Village selectedVillage;
 
-    void OnMouseDown()
+void OnMouseDown()
     {
         Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
         Village selectedVillage = Map.Instance.FindVillageByName(this.gameObject.name);
+        Debug.Log(Map.Instance.FindVillageByName(this.gameObject.name).Name);
         Text villageName = GameObject.Find("EntityName").GetComponent<Text>();
+        Text villagePop = GameObject.Find("Population").GetComponent<Text>();
+        Text villageLevel = GameObject.Find("Upgrade Level").GetComponent<Text>();
         villageName.text = selectedVillage.Name;
+        villagePop.text = selectedVillage.Population.ToString();
+        villageLevel.text = selectedVillage.UpgradeLevel.ToString();
     }
 
 
