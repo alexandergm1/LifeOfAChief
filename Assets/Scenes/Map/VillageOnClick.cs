@@ -11,11 +11,15 @@ public class VillageOnClick : MonoBehaviour
 
     void Start()
     {
-       
+
     }
 
 
     void Update()
     {
+        if (Map.Instance.FindVillageByName(this.gameObject.name) == null)
+        {
+        this.gameObject.SetActive(false);
+        }
     }
 }
