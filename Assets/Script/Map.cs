@@ -64,6 +64,15 @@ public class Map
         return null;
     }
 
+    public BuildingSite FindBuildingSiteByName(string name)
+    {
+        foreach (BuildingSite buildingSite in BuildingSites)
+        {
+            if (buildingSite.Name == name) return buildingSite;
+        }
+        return null;
+    }
+
     public void EndTurnReduceConstructionTime()
     {
         foreach (BuildingSite buildingSite in this.BuildingSites)

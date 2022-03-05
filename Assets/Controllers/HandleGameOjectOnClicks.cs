@@ -8,9 +8,11 @@ public class HandleGameOjectOnClicks : MonoBehaviour
 
     [SerializeField] private Transform PopupWindowVillage;
     [SerializeField] private Transform PopupWindowCastle;
+    [SerializeField] private Transform PopupWindowBuildingSite;
     [SerializeField] private Transform panel;
     public Village selectedVillage;
     public Castle selectedCastle;
+    public BuildingSite selectedBuildingSite;
 
     void createVillage(){
         Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
@@ -31,6 +33,19 @@ public class HandleGameOjectOnClicks : MonoBehaviour
         castleSoldiers.text = selectedCastle.Soldiers.ToString();
     }
 
+    void createBuildingSite(){
+        Instantiate(PopupWindowBuildingSite, Vector3.zero, Quaternion.identity, panel.transform);
+        Text BuildingSiteName = GameObject.Find("EntityName").GetComponent<Text>();
+        Text BuildingSitePop = GameObject.Find("Population").GetComponent<Text>();
+        Text BuildingSiteGoldCost = GameObject.Find("Gold Cost").GetComponent<Text>();
+        Text BuildingSiteLumberCost = GameObject.Find("Lumber Cost").GetComponent<Text>();
+        BuildingSiteName.text = selectedBuildingSite.Name;
+        BuildingSitePop.text = selectedBuildingSite.Population.ToString();
+        BuildingSiteGoldCost.text = selectedBuildingSite.GoldCost.ToString();
+        BuildingSiteLumberCost.text = selectedBuildingSite.LumberCost.ToString();
+        PlayerActions.buildingSite = selectedBuildingSite;
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -40,10 +55,14 @@ public class HandleGameOjectOnClicks : MonoBehaviour
  
         if (Physics.Raycast(ray, out hit))
         {
-            GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Popup");
-            foreach(GameObject currentObject in taggedObjects){
-                Destroy(currentObject);
-            }
+            Debug.Log(hit.collider.gameObject.name);
+            // if (hit.collider.gameObject.tag != "Popup")
+            // { 
+            // GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Popup");
+            // foreach(GameObject currentObject in taggedObjects){
+            //     Destroy(currentObject);
+            // }
+            // }
                  
  
             if (hit.collider.gameObject.tag == "Village")
@@ -59,9 +78,9 @@ public class HandleGameOjectOnClicks : MonoBehaviour
             }
             else if (hit.collider.gameObject.tag == "BuildingSite")
             {
-                selectedCastle = Map.Instance.FindCastleByName(hit.collider.gameObject.name);
+                selectedBuildingSite = Map.Instance.FindBuildingSiteByName(hit.collider.gameObject.name);
                 Debug.Log(hit.collider.gameObject.name);
-                Invoke("createCastle", 0.001f);
+                Invoke("createBuildingSite", 0.001f);
             }
             else
             {

@@ -213,7 +213,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8a2ecdc9357d87d429af6f58cafb5839, type: 3}
       propertyPath: m_Name
-      value: BuildingSite2
+      value: BuildingSite4
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8a2ecdc9357d87d429af6f58cafb5839, type: 3}
       propertyPath: m_TagString
@@ -841,7 +841,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8a2ecdc9357d87d429af6f58cafb5839, type: 3}
       propertyPath: m_Name
-      value: BuildingSite1
+      value: BuildingSite7
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8a2ecdc9357d87d429af6f58cafb5839, type: 3}
       propertyPath: m_TagString
@@ -1074,6 +1074,8 @@ GameObject:
   - component: {fileID: 804928545}
   - component: {fileID: 804928547}
   - component: {fileID: 804928546}
+  - component: {fileID: 804928549}
+  - component: {fileID: 804928548}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1139,6 +1141,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804928544}
   m_CullTransparentMesh: 1
+--- !u!114 &804928548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804928544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &804928549
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804928544}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &827243753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,7 +1545,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8a2ecdc9357d87d429af6f58cafb5839, type: 3}
       propertyPath: m_Name
-      value: BuildingSite4
+      value: BuildingSite6
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8a2ecdc9357d87d429af6f58cafb5839, type: 3}
       propertyPath: m_TagString
@@ -2088,7 +2128,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8a2ecdc9357d87d429af6f58cafb5839, type: 3}
       propertyPath: m_Name
-      value: BuildingSite3
+      value: BuildingSite5
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8a2ecdc9357d87d429af6f58cafb5839, type: 3}
       propertyPath: m_TagString
@@ -2815,6 +2855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PopupWindowVillage: {fileID: 8607240500171075584, guid: c4943088ffaa9924cbd3edca276477aa, type: 3}
   PopupWindowCastle: {fileID: 7768805212745921232, guid: 70ea73b87888dbe4e858f96e6aa8ecaa, type: 3}
+  PopupWindowBuildingSite: {fileID: 6351866233897895265, guid: dde42d53635e69545b37f679ac01e1ea, type: 3}
   panel: {fileID: 804928545}
 --- !u!4 &2019158623
 Transform:
