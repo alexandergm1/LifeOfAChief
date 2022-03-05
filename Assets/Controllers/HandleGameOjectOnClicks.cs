@@ -18,10 +18,10 @@ public class HandleGameOjectOnClicks : MonoBehaviour
  
         if (Physics.Raycast(ray, out hit))
         {
-            // GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Popup");
-            // foreach(GameObject currentObject in taggedObjects){
-            //     Destroy(currentObject);
-            // }
+            GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Popup");
+            foreach(GameObject currentObject in taggedObjects){
+                Destroy(currentObject);
+            }
                  
  
             if (hit.collider.gameObject.tag == "Village")
@@ -31,6 +31,7 @@ public class HandleGameOjectOnClicks : MonoBehaviour
                 Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
                 Debug.Log(Map.Instance.FindVillageByName(hit.collider.gameObject.name).Name);
                 }
+
                 Village selectedVillage = Map.Instance.FindVillageByName(hit.collider.gameObject.name);
                 Text villageName = GameObject.Find("EntityName").GetComponent<Text>();
                 Text villagePop = GameObject.Find("Population").GetComponent<Text>();
@@ -38,7 +39,9 @@ public class HandleGameOjectOnClicks : MonoBehaviour
                 villageName.text = selectedVillage.Name;
                 villagePop.text = selectedVillage.Population.ToString();
                 villageLevel.text = selectedVillage.UpgradeLevel.ToString();
+
             }
+
             else if (hit.collider.gameObject.tag == "Castle")
             {
                 Debug.Log("Clicked on Castle");
