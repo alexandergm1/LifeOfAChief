@@ -8,6 +8,17 @@ public class HandleGameOjectOnClicks : MonoBehaviour
 
     [SerializeField] private Transform PopupWindowVillage;
     [SerializeField] private Transform panel;
+    public Village selectedVillage;
+
+    void createVillage(){
+        Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
+        Text villageName = GameObject.Find("EntityName").GetComponent<Text>();
+        Text villagePop = GameObject.Find("Population").GetComponent<Text>();
+        Text villageLevel = GameObject.Find("Upgrade Level").GetComponent<Text>();
+        villageName.text = selectedVillage.Name;
+        villagePop.text = selectedVillage.Population.ToString();
+        villageLevel.text = selectedVillage.UpgradeLevel.ToString();
+    }
 
     void Update()
     {
@@ -26,20 +37,8 @@ public class HandleGameOjectOnClicks : MonoBehaviour
  
             if (hit.collider.gameObject.tag == "Village")
             {
-                if (GameObject.Find("PopupWindowVillage(Clone)") == false){
-
-                Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
-                Debug.Log(Map.Instance.FindVillageByName(hit.collider.gameObject.name).Name);
-                }
-
-                Village selectedVillage = Map.Instance.FindVillageByName(hit.collider.gameObject.name);
-                Text villageName = GameObject.Find("EntityName").GetComponent<Text>();
-                Text villagePop = GameObject.Find("Population").GetComponent<Text>();
-                Text villageLevel = GameObject.Find("Upgrade Level").GetComponent<Text>();
-                villageName.text = selectedVillage.Name;
-                villagePop.text = selectedVillage.Population.ToString();
-                villageLevel.text = selectedVillage.UpgradeLevel.ToString();
-
+                selectedVillage = Map.Instance.FindVillageByName(hit.collider.gameObject.name);
+                Invoke("createVillage", 0.01f);
             }
 
             else if (hit.collider.gameObject.tag == "Castle")
