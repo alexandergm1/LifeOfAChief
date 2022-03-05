@@ -33,7 +33,7 @@ public class Castle
 
     public static Castle InitializeStartingCastle()
     {
-        Castle startCastle = new Castle("Dunvegan");
+        Castle startCastle = new Castle("Tower_a");
         startCastle.Population = 2000;
         startCastle.Soldiers = 200;
         return startCastle;

@@ -7,8 +7,10 @@ public class HandleGameOjectOnClicks : MonoBehaviour
 {
 
     [SerializeField] private Transform PopupWindowVillage;
+    [SerializeField] private Transform PopupWindowCastle;
     [SerializeField] private Transform panel;
     public Village selectedVillage;
+    public Castle selectedCastle;
 
     void createVillage(){
         Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
@@ -18,6 +20,15 @@ public class HandleGameOjectOnClicks : MonoBehaviour
         villageName.text = selectedVillage.Name;
         villagePop.text = selectedVillage.Population.ToString();
         villageLevel.text = selectedVillage.UpgradeLevel.ToString();
+    }
+    void createCastle(){
+        Instantiate(PopupWindowCastle, Vector3.zero, Quaternion.identity, panel.transform);
+        Text castleName = GameObject.Find("EntityName").GetComponent<Text>();
+        Text castlePop = GameObject.Find("Population").GetComponent<Text>();
+        Text castleSoldiers = GameObject.Find("Soldiers").GetComponent<Text>();
+        castleName.text = selectedCastle.Name;
+        castlePop.text = selectedCastle.Population.ToString();
+        castleSoldiers.text = selectedCastle.Soldiers.ToString();
     }
 
     void Update()
@@ -43,7 +54,9 @@ public class HandleGameOjectOnClicks : MonoBehaviour
 
             else if (hit.collider.gameObject.tag == "Castle")
             {
-                Debug.Log("Clicked on Castle");
+                selectedCastle = Map.Instance.FindCastleByName(hit.collider.gameObject.name);
+                Debug.Log(hit.collider.gameObject.name);
+                Invoke("createCastle", 0.001f);
             }
             else if (hit.collider.gameObject.tag == "BuildingSite")
             {

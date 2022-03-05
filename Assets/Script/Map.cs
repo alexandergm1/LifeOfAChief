@@ -55,6 +55,15 @@ public class Map
         return null;
     }
 
+    public Castle FindCastleByName(string name)
+    {
+        foreach (Castle castle in Castles)
+        {
+            if (castle.Name == name) return castle;
+        }
+        return null;
+    }
+
     public void EndTurnReduceConstructionTime()
     {
         foreach (BuildingSite buildingSite in this.BuildingSites)

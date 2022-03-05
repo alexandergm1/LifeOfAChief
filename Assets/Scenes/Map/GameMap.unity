@@ -3022,7 +3022,7 @@ GameObject:
   - component: {fileID: 2014496668}
   - component: {fileID: 2014496669}
   m_Layer: 0
-  m_Name: Castle
+  m_Name: Dunvegan
   m_TagString: Castle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3101,6 +3101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PopupWindowVillage: {fileID: 8607240500171075584, guid: c4943088ffaa9924cbd3edca276477aa, type: 3}
+  PopupWindowCastle: {fileID: 7768805212745921232, guid: 70ea73b87888dbe4e858f96e6aa8ecaa, type: 3}
   panel: {fileID: 804928545}
 --- !u!4 &2019158623
 Transform:
