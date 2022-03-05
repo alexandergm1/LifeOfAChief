@@ -55,12 +55,13 @@ public class HandleGameOjectOnClicks : MonoBehaviour
             else if (hit.collider.gameObject.tag == "Castle")
             {
                 selectedCastle = Map.Instance.FindCastleByName(hit.collider.gameObject.name);
-                Debug.Log(hit.collider.gameObject.name);
                 Invoke("createCastle", 0.001f);
             }
             else if (hit.collider.gameObject.tag == "BuildingSite")
             {
-                Debug.Log("Clicked on BuildingSite");
+                selectedCastle = Map.Instance.FindCastleByName(hit.collider.gameObject.name);
+                Debug.Log(hit.collider.gameObject.name);
+                Invoke("createCastle", 0.001f);
             }
             else
             {
