@@ -38,7 +38,7 @@ public class HandleGameOjectOnClicks : MonoBehaviour
             if (hit.collider.gameObject.tag == "Village")
             {
                 selectedVillage = Map.Instance.FindVillageByName(hit.collider.gameObject.name);
-                Invoke("createVillage", 0.01f);
+                Invoke("createVillage", 0.001f);
             }
 
             else if (hit.collider.gameObject.tag == "Castle")
