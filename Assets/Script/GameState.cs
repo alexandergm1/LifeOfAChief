@@ -10,17 +10,19 @@ public class GameState
 
     public int Turn { get; set; }
     public Player player { get; set; }
+    public Map map { get; set; }
     public static GameState Instance { get; private set;}
 
 
-    public GameState(Player player){
+    public GameState(Player player, Map map){
         this.player = player;
+        this.map = map;
         this.Turn = 0;
     }
 
-    public static GameState InitializeGameState(Player player)
+    public static GameState InitializeGameState(Player player, Map map)
     {
-        Instance = new GameState(player);
+        Instance = new GameState(player, map);
         return Instance;
     }
 
@@ -28,6 +30,8 @@ public class GameState
         this.Turn += 1;
         this.player.CollectTotalIncome();
         this.player.Gold += 50;
+        this.map.EndTurnReduceConstructionTime();
+        this.map.EndTurnCheckBuildFinished();
     }
 
     public void AdjustPopulationOnTurnEnd(){

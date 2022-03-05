@@ -14,6 +14,7 @@ public class GameStateTest
     [SetUp]
     public void Setup()
     {
+        Map map = Map.InitializeMap();
         player = Player.InitializePlayer("Jack");
         player2 = Player.InitializePlayer("Ron");
         village = Village.InitializeVillage("Limeric", TradeGood.SEALS);
@@ -22,7 +23,7 @@ public class GameStateTest
         village2.Population += 200;
         player.AddVillage(village);
         player.AddVillage(village2);
-        gameState = GameState.InitializeGameState(player);
+        gameState = GameState.InitializeGameState(player, map);
     }
 
     [Test]

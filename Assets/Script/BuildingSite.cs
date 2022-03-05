@@ -25,23 +25,22 @@ public class BuildingSite
 
     public static BuildingSite InitializeBuildingSite1()
     {
-        return new BuildingSite("BuildingSite1", 600, TradeGood.LUMBER, 300, 300, 3);
+        return new BuildingSite("BuildingSite4", 600, TradeGood.LUMBER, 300, 300, 3);
     }
 
     public static BuildingSite InitializeBuildingSite2()
     {
-        return new BuildingSite("BuildingSite2", 600, TradeGood.WHISKY, 1000, 600, 5);
+        return new BuildingSite("BuildingSite5", 600, TradeGood.WHISKY, 1000, 600, 5);
     }
 
     public static BuildingSite InitializeBuildingSite3()
     {
-        return new BuildingSite("BuildingSite3", 600, TradeGood.SEAWEED, 1000, 600, 5);
+        return new BuildingSite("BuildingSite6", 600, TradeGood.SEAWEED, 1000, 600, 5);
     }
 
-       
     public static BuildingSite InitializeBuildingSite4()
     {
-        return new BuildingSite("BuildingSite4", 500, TradeGood.LUMBER, 1200, 400, 6);
+        return new BuildingSite("BuildingSite7", 500, TradeGood.LUMBER, 1200, 400, 6);
     }
 
 

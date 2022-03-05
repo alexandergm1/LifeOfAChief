@@ -72,13 +72,22 @@ public class Map
         }
     }
 
-    // public void EndTurnCheckBuildFinished()
-    // {
-    //     foreach (BuildingSite buildingSite in buildingSites)
-    //     {
-    //         if (buildingSite.UnderConstruction == true && buildingSite.BuildTime == 0) ????
-    //     } 
-    // }
+    public void EndTurnCheckBuildFinished()
+    {
+        foreach (BuildingSite buildingSite in BuildingSites.ToArray())
+        {
+            if (buildingSite.UnderConstruction == true && buildingSite.BuildTime == 0)
+            {
+                string name = "Village" + buildingSite.Name.Substring(buildingSite.Name.Length-1);
+                int population = buildingSite.Population;
+                TradeGood tradeGood = buildingSite.tradeGood;
+                Village village = new Village(name, population, tradeGood, 0, 0, 10);
+                Player.Instance.AddVillage(village);
+                this.AddVillage(village);
+                this.BuildingSites.Remove(buildingSite);
+            }
+        } 
+    }
 
 
 }

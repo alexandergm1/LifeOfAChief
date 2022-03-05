@@ -21,13 +21,17 @@ public class GameSettings : MonoBehaviour
         player.TakeControlOfVillageFromMap(map, "Village2");
         player.TakeControlOfVillageFromMap(map, "Village3");
         player.TakeControlOfCastleFromMap(map, "Dunvegan");
-        gameState = GameState.InitializeGameState(player);
+        gameState = GameState.InitializeGameState(player, map);
         ClickBuilding.player = player;
         Name.text = player.Name.ToString();
     }
 
     public void MainEndTurn(){
         gameState.EndTurn();
+        if (map.BuildingSites[0].UnderConstruction == false) player.Build(map.BuildingSites[0]);
+        // Debug.Log(map.Villages.Count);
+        // Debug.Log(map.BuildingSites.Count);
+        Debug.Log(map.Villages[map.Villages.Count - 1].Name);
     }
 
     void Update()
