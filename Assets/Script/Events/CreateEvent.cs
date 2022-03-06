@@ -6,21 +6,35 @@ using UnityEngine.UI;
 public class CreateEvent : MonoBehaviour
 {
 
-    void Start(){
-        EventManager.TestEventPopup += createEventPopup;
-    }
-
     [SerializeField] private Transform EventPopup;
     [SerializeField] private Transform panel;
     [SerializeField] private Transform EventLocation;
-    private string testString = "This is the example event title";
-    private string testString2 = "This is the example event text";
 
-    public void createEventPopup(){
+    void Start(){
+        EventManager.TestEventPopup += generateEvent;
+    }
+
+
+    public List<EventList> eventList;
+    public GameObject[] options;
+    public int currentEvent;
+
+    void generateEvent(){
+        currentEvent = Random.Range(0, eventList.Count);
         Instantiate(EventPopup, EventLocation.position, Quaternion.identity, panel.transform);
         Text eventTitle = GameObject.Find("Event Title").GetComponent<Text>();
         Text eventText = GameObject.Find("Event Text").GetComponent<Text>();
-        eventTitle.text = testString;
-        eventText.text = testString2;
+        eventTitle.text = eventList[currentEvent].title;
+        eventText.text = eventList[currentEvent].content;
+    }
+
+    void setOptions(){
+        for (int i = 0; i < options.Length; i++){
+            options[i].transform.GetChild(0).GetComponent<Text>().text = eventList[currentEvent].availableOptions[i];
+        }
+    }
+
+
+    public void createEventPopup(){
     }
 }
