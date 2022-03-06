@@ -12,11 +12,12 @@ public class CreateEvent : MonoBehaviour
 
     [SerializeField] private Transform EventPopup;
     [SerializeField] private Transform panel;
+    [SerializeField] private Transform EventLocation;
     private string testString = "This is the example event title";
     private string testString2 = "This is the example event text";
 
     public void createEventPopup(){
-        Instantiate(EventPopup, Vector3.zero, Quaternion.identity, panel.transform);
+        Instantiate(EventPopup, EventLocation.position, Quaternion.identity, panel.transform);
         Text eventTitle = GameObject.Find("Event Title").GetComponent<Text>();
         Text eventText = GameObject.Find("Event Text").GetComponent<Text>();
         eventTitle.text = testString;

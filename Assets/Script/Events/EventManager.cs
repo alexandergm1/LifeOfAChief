@@ -9,7 +9,7 @@ public class EventManager : MonoBehaviour
 {
 
     public static event Action TestEventPopup;
-    public GameObject endTurnButton = GameObject.Find("EndTurn");
+    public GameObject endTurnButton;
 
 
     void Update()
@@ -17,6 +17,7 @@ public class EventManager : MonoBehaviour
         if (EventSystem.current.currentSelectedGameObject == endTurnButton)
         {              
             TestEventPopup?.Invoke();
+            EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(null);
         }
     }
 }
