@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using UnityEngine.EventSystems;
 
 public class HandleGameOjectOnClicks : MonoBehaviour
 {
@@ -55,14 +57,19 @@ public class HandleGameOjectOnClicks : MonoBehaviour
  
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log(hit.collider.gameObject.name);
-            // if (hit.collider.gameObject.tag != "Popup")
-            // { 
-            // GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Popup");
-            // foreach(GameObject currentObject in taggedObjects){
-            //     Destroy(currentObject);
+            // GameObject[] buttonObjects = GameObject.FindGameObjectsWithTag("Button");
+            // foreach (GameObject obj in buttonObjects) 
+            // {
+                if (EventSystem.current.currentSelectedGameObject == null)
+                {
+                        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Popup");
+                        foreach(GameObject currentObject in taggedObjects)
+                        {
+                            Destroy(currentObject);
+                        }
+                }   
             // }
-            // }
+                    
                  
  
             if (hit.collider.gameObject.tag == "Village")

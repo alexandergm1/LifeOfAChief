@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using UnityEngine.EventSystems;
 
 public class GameSettings : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class GameSettings : MonoBehaviour
     public static Player player { get; set;}
     public static GameState gameState { get; set;}
     public static Map map { get; set;}
+
 
     void Start(){
         map = Map.InitializeMap();
