@@ -9,6 +9,7 @@ TagManager:
   - BuildingSite
   - Castle
   - Popup
+  - EndTurn
   layers:
   - Default
   - TransparentFX
