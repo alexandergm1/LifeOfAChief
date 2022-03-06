@@ -1696,6 +1696,8 @@ GameObject:
   - component: {fileID: 1458765423}
   - component: {fileID: 1458765422}
   - component: {fileID: 1458765421}
+  - component: {fileID: 1458765424}
+  - component: {fileID: 1458765425}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1751,6 +1753,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1458765424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458765420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c2d4a31422c0a49ba3c9f7150f3750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endTurnButton: {fileID: 1944767143}
+--- !u!114 &1458765425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458765420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d39647f6e83648d41b3e5830d53a7c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventPopup: {fileID: 2810398606318810797, guid: 4bddd3a9878ff704c9d09e8cced5c54a, type: 3}
+  panel: {fileID: 804928545}
 --- !u!1 &1565991344
 GameObject:
   m_ObjectHideFlags: 0
