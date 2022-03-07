@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 using UnityEngine.EventSystems;
 
 
@@ -22,7 +21,7 @@ public class CreateEvent : MonoBehaviour
     }
 
     void generateEvent(){
-        GameEvent currentEvent = GameEventList.Instance.events[0];
+        int currentEvent = Random.Range (0, GameEventList.Instance.events.Count);
         Instantiate(EventPopup, EventLocation.position, Quaternion.identity, panel.transform);
         Text eventTitle = GameObject.Find("Event Title").GetComponent<Text>();
         Text eventText = GameObject.Find("Event Text").GetComponent<Text>();
@@ -30,14 +29,17 @@ public class CreateEvent : MonoBehaviour
         Text option2Text = GameObject.Find("Option2 Text").GetComponent<Text>();
         Text option3Text = GameObject.Find("Option3 Text").GetComponent<Text>();
         Button Option1 = GameObject.Find("Option1").GetComponent<Button>();
-		Option1.onClick.AddListener(() => callMethod(currentEvent.method1));
+		Option1.onClick.AddListener(() => callMethod(GameEventList.Instance.events[currentEvent].method1));
+        Button Option2 = GameObject.Find("Option2").GetComponent<Button>();
+		Option2.onClick.AddListener(() => callMethod(GameEventList.Instance.events[currentEvent].method2));
+        Button Option3 = GameObject.Find("Option3").GetComponent<Button>();
+		Option3.onClick.AddListener(() => callMethod(GameEventList.Instance.events[currentEvent].method3));
 
-        eventTitle.text = currentEvent.title;
-        eventText.text = currentEvent.content;
-        option1Text.text = currentEvent.option1;
-        option2Text.text = currentEvent.option2;
-        option3Text.text = currentEvent.option3;
-
+        eventTitle.text = GameEventList.Instance.events[currentEvent].title;
+        eventText.text = GameEventList.Instance.events[currentEvent].content;
+        option1Text.text = GameEventList.Instance.events[currentEvent].option1;
+        option2Text.text = GameEventList.Instance.events[currentEvent].option2;
+        option3Text.text = GameEventList.Instance.events[currentEvent].option3;
     }
 
     public void event1method1(){
@@ -50,6 +52,15 @@ public class CreateEvent : MonoBehaviour
     }
     public void event1method3(){
         Player.Instance.Gold -= 0;
+    }
+    public void event2method1(){
+        Player.Instance.castles[0].Soldiers -= 100;
+    }
+    public void event2method2(){
+        Player.Instance.Gold -= 100;
+    }
+    public void event2method3(){
+        Player.Instance.villages[0].Population -= 150;
     }
     
     public void callMethod(string methodName){
