@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using UnityEngine.EventSystems;
+
+
 
 
 public class CreateEvent : MonoBehaviour
@@ -26,7 +30,7 @@ public class CreateEvent : MonoBehaviour
         Text option2Text = GameObject.Find("Option2 Text").GetComponent<Text>();
         Text option3Text = GameObject.Find("Option3 Text").GetComponent<Text>();
         Button Option1 = GameObject.Find("Option1").GetComponent<Button>();
-		Option1.onClick.AddListener(event1method1);
+		Option1.onClick.AddListener(() => callMethod(currentEvent.method1));
 
         eventTitle.text = currentEvent.title;
         eventText.text = currentEvent.content;
@@ -47,4 +51,9 @@ public class CreateEvent : MonoBehaviour
     public void event1method3(){
         Player.Instance.Gold -= 0;
     }
+    
+    public void callMethod(string methodName){
+        Invoke(methodName, 0.001f);
+    }
+
 }
