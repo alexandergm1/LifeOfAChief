@@ -32,19 +32,31 @@ public class GameState
         this.player.Gold += 50;
         this.map.EndTurnReduceConstructionTime();
         this.map.EndTurnCheckBuildFinished();
+        AdjustPopulationOnTurnEnd();
     }
 
     public void AdjustPopulationOnTurnEnd(){
         foreach (Village village in this.player.villages)
         {
-            float randomNum = (((float) Random.Range(90, 110))/100);
+            float randomNum = (((float) Random.Range(96, 105))/100);
             while (randomNum == 1F)
             {
-                randomNum = (((float) Random.Range(90, 110))/100);
+                randomNum = (((float) Random.Range(96, 105))/100);
             }
             float population = village.Population;
             population *= randomNum;
             village.Population = (int) population;
+        }
+        foreach (Castle castle in this.player.castles)
+        {
+            float randomNum = (((float) Random.Range(96, 105))/100);
+            while (randomNum == 1F)
+            {
+                randomNum = (((float) Random.Range(96, 105))/100);
+            }
+            float population = castle.Population;
+            population *= randomNum;
+            castle.Population = (int) population;
         }
     }
 

@@ -19,8 +19,7 @@ public class PlayerActions : MonoBehaviour
 
     public void build()
     {
-        Debug.Log("clicked");
-        Debug.Log(buildingSite.Name);
-        Player.Instance.Build(buildingSite);
+        if (buildingSite.UnderConstruction == false) Player.Instance.Build(buildingSite);
+        
     }
 }

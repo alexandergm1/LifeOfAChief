@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class HandleGameOjectOnClicks : MonoBehaviour
 {
@@ -21,9 +22,13 @@ public class HandleGameOjectOnClicks : MonoBehaviour
         Text villageName = GameObject.Find("EntityName").GetComponent<Text>();
         Text villagePop = GameObject.Find("Population").GetComponent<Text>();
         Text villageLevel = GameObject.Find("Upgrade Level").GetComponent<Text>();
+        Slider villageTax = GameObject.Find("Slider").GetComponent<Slider>();
         villageName.text = selectedVillage.Name;
         villagePop.text = selectedVillage.Population.ToString();
         villageLevel.text = selectedVillage.UpgradeLevel.ToString();
+        villageTax.value = selectedVillage.Tax;
+        TaxSlider.village = selectedVillage;
+        // selectedVillage.Tax = Int32.Parse(villageTax.text);
     }
     void createCastle(){
         Instantiate(PopupWindowCastle, Vector3.zero, Quaternion.identity, panel.transform);
@@ -57,9 +62,6 @@ public class HandleGameOjectOnClicks : MonoBehaviour
  
         if (Physics.Raycast(ray, out hit))
         {
-            // GameObject[] buttonObjects = GameObject.FindGameObjectsWithTag("Button");
-            // foreach (GameObject obj in buttonObjects) 
-            // {
                 if (EventSystem.current.currentSelectedGameObject == null)
                 {
                         GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Popup");
@@ -68,10 +70,7 @@ public class HandleGameOjectOnClicks : MonoBehaviour
                             Destroy(currentObject);
                         }
                 }   
-            // }
                     
-                 
- 
             if (hit.collider.gameObject.tag == "Village")
             {
                 selectedVillage = Map.Instance.FindVillageByName(hit.collider.gameObject.name);

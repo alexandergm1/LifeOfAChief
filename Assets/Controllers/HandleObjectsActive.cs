@@ -5,10 +5,12 @@ using UnityEngine;
 public class HandleObjectsActive : MonoBehaviour
 {
     public GameObject[] villages {get; set;}
+    public GameObject[] buildingSites {get; set;}
 
     void Start()
     {
         villages = GameObject.FindGameObjectsWithTag("Village");
+        buildingSites = GameObject.FindGameObjectsWithTag("BuildingSite");
     }
 
     void Update()
@@ -19,5 +21,12 @@ public class HandleObjectsActive : MonoBehaviour
         village.SetActive(false);
         }
         else village.SetActive(true);
+
+        foreach (GameObject buildingSite in buildingSites)
+        if (Map.Instance.FindBuildingSiteByName(buildingSite.name) == null)
+        {
+        buildingSite.SetActive(false);
+        }
+        else buildingSite.SetActive(true);
     }
 }

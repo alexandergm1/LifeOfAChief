@@ -11,13 +11,13 @@ public class Village
     public int UpgradeCounter {get; set;}
     public int Tax { get; set;}
 
-    public Village(string name, int population, TradeGood tradeGood, int UpgradeLevel, int UpgradeCounter, int Tax){
+    public Village(string name, int population, TradeGood tradeGood, int UpgradeLevel, int UpgradeCounter, int tax){
         this.Name = name;
         this.Population = population;
         this.tradeGood = tradeGood;
         this.UpgradeLevel = UpgradeLevel;
         this.UpgradeCounter = UpgradeCounter;
-        this.Tax = 0;
+        this.Tax = tax;
     }
 
     private Village(string name, TradeGood tradeGood){
