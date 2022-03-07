@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-using UnityEngine.Events;
 
 public class GameEvent : MonoBehaviour
 {
@@ -16,6 +15,8 @@ public class GameEvent : MonoBehaviour
     public string method1;
     public string method2;
     public string method3;
+    public Dictionary<string, System.Action> functions = new Dictionary<string, System.Action>();
+
 
     public GameEvent(string title, string content, string option1, string option2, string option3, string method1, string method2, string method3){
         this.title = title;
@@ -33,29 +34,19 @@ public class GameEvent : MonoBehaviour
     public void event1method1(){
         Player.Instance.Gold -= 50;
         Player.Instance.Lumber -= 50;
-        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Event");
-        foreach(GameObject currentObject in taggedObjects){
-             Destroy(currentObject);
-        }
     }
     public void event1method2(){
         Player.Instance.Gold -= 25;
         Player.Instance.Lumber -= 25;
-        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Event");
-        foreach(GameObject currentObject in taggedObjects){
-             Destroy(currentObject);
-        }
     }
     public void event1method3(){
-        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Event");
-        foreach(GameObject currentObject in taggedObjects){
-             Destroy(currentObject);
-        }
         Player.Instance.Gold -= 0;
     }
 
-    public void getGameEventMethods(string optionName){
-        Invoke($"{optionName}", 0.01f);
+    void Start(){
+    functions.Add("event1method1", event1method1);
+    CreateEvent.listOfMethods = functions;
+
     }
 
     public static GameEvent InitializeEvent(string title, string content, string option1, string option2, string option3, string method1, string method2, string method3){
