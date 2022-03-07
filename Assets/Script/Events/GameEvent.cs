@@ -15,7 +15,6 @@ public class GameEvent : MonoBehaviour
     public string method1;
     public string method2;
     public string method3;
-    public List<GameEvent> eventList1 = new List<GameEvent>();
 
     public GameEvent(string title, string content, string option1, string option2, string option3, string method1, string method2, string method3){
         this.title = title;
@@ -29,7 +28,9 @@ public class GameEvent : MonoBehaviour
         
     }
 
-    public GameEvent event1 = new GameEvent("A Storm is Brewing...", "Your villages have been battered by a storm, will you send them much-needed aid?", "Send all the help that we can! (-50 Gold, -50 Lumber)", "Only send what is needed most. (-25 Gold, -25 Lumber)", "They chose to live near the sea! (No effect)", "event1method1", "event1method2", "event1method3");
+    // Awake(){
+    //     public GameEvent currentEvent = new GameEvent("A Storm is Brewing...", "Your villages have been battered by a storm, will you send them much-needed aid?", "Send all the help that we can! (-50 Gold, -50 Lumber)", "Only send what is needed most. (-25 Gold, -25 Lumber)", "They chose to live near the sea! (No effect)", "event1method1", "event1method2", "event1method3");
+    // }
 
     // FIRST EVENT
     public void event1method1(){
@@ -56,14 +57,9 @@ public class GameEvent : MonoBehaviour
         Player.Instance.Gold -= 0;
     }
 
-
-
-
-
-
-    void Start(){
-        eventList1.Add(event1);
-        CreateEvent.eventList = eventList1;
+    public static GameEvent InitializeEvent(string title, string content, string option1, string option2, string option3, string method1, string method2, string method3){
+        return new GameEvent(title, content, option1, option2, option3, method1, method2, method3);
     }
+
     
 }

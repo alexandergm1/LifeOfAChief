@@ -9,15 +9,13 @@ public class CreateEvent : MonoBehaviour
     [SerializeField] private Transform EventPopup;
     [SerializeField] private Transform panel;
     [SerializeField] private Transform EventLocation;
-    public static List<GameEvent> eventList;
-    public GameEvent currentEvent;
+    public static GameEvent currentEvent;
 
     void Start(){
         EventManager.TestEventPopup += generateEvent;
     }
 
     void generateEvent(){
-        currentEvent = eventList[0];
         Instantiate(EventPopup, EventLocation.position, Quaternion.identity, panel.transform);
         Text eventTitle = GameObject.Find("Event Title").GetComponent<Text>();
         Text eventText = GameObject.Find("Event Text").GetComponent<Text>();
