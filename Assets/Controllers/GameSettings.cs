@@ -31,10 +31,6 @@ public class GameSettings : MonoBehaviour
 
     public void MainEndTurn(){
         gameState.EndTurn();
-        // if (map.BuildingSites[0].UnderConstruction == false) player.Build(map.BuildingSites[0]);
-        // Debug.Log(map.Villages.Count);
-        // Debug.Log(map.BuildingSites.Count);
-        // Debug.Log(map.Villages[map.Villages.Count - 1].Name);
     }
 
     void Update()

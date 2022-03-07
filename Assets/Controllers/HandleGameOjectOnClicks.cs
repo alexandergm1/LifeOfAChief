@@ -21,13 +21,18 @@ public class HandleGameOjectOnClicks : MonoBehaviour
         Instantiate(PopupWindowVillage, Vector3.zero, Quaternion.identity, panel.transform);
         Text villageName = GameObject.Find("EntityName").GetComponent<Text>();
         Text villagePop = GameObject.Find("Population").GetComponent<Text>();
-        Text villageLevel = GameObject.Find("Upgrade Level").GetComponent<Text>();
+        Text villageExpInc = GameObject.Find("Expected Income").GetComponent<Text>();
+        Text villageTradeGood = GameObject.Find("TradeGood").GetComponent<Text>();
         Slider villageTax = GameObject.Find("Slider").GetComponent<Slider>();
-        villageName.text = selectedVillage.Name;
-        villagePop.text = selectedVillage.Population.ToString();
-        villageLevel.text = selectedVillage.UpgradeLevel.ToString();
+        villageName.text = selectedVillage.Name + "(lvl " + selectedVillage.UpgradeLevel.ToString() + ")";
+        villagePop.text = "Population: " + selectedVillage.Population.ToString();
+        string villageExpGold = "<color=#00FF00>" + (selectedVillage.CalculatePopTax() + selectedVillage.CalculateResourceIncome()).ToString() + "</color>";
+        string villageExpLumber = "<color=#00FF00>" + selectedVillage.CalculateLumberIncome().ToString() + "</color>";
+        villageExpInc.text = "Income: " + villageExpGold + " gold, " + villageExpLumber + " lumber";
         villageTax.value = selectedVillage.Tax;
+        villageTradeGood.text = "Producing " + selectedVillage.tradeGood.ToString();
         TaxSlider.village = selectedVillage;
+        UpgradeVillage.village = selectedVillage;
     }
     void createCastle(){
         Instantiate(PopupWindowCastle, Vector3.zero, Quaternion.identity, panel.transform);
@@ -42,14 +47,10 @@ public class HandleGameOjectOnClicks : MonoBehaviour
     void createBuildingSite(){
         Instantiate(PopupWindowBuildingSite, Vector3.zero, Quaternion.identity, panel.transform);
         Text BuildingSiteName = GameObject.Find("EntityName").GetComponent<Text>();
-        Text BuildingSitePop = GameObject.Find("Population").GetComponent<Text>();
-        Text BuildingSiteGoldCost = GameObject.Find("Gold Cost").GetComponent<Text>();
-        Text BuildingSiteLumberCost = GameObject.Find("Lumber Cost").GetComponent<Text>();
+        Text BuildingSiteTradeGood = GameObject.Find("Trade Good").GetComponent<Text>();
         BuildingSiteName.text = selectedBuildingSite.Name;
-        BuildingSitePop.text = selectedBuildingSite.Population.ToString();
-        BuildingSiteGoldCost.text = selectedBuildingSite.GoldCost.ToString();
-        BuildingSiteLumberCost.text = selectedBuildingSite.LumberCost.ToString();
-        PlayerActions.buildingSite = selectedBuildingSite;
+        BuildingSiteTradeGood.text = "Trade Good - " + selectedBuildingSite.tradeGood.ToString();
+        Colonise.buildingSite = selectedBuildingSite;
     }
 
     void Update()

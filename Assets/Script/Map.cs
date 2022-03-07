@@ -98,5 +98,19 @@ public class Map
         } 
     }
 
-
+    public void EndTurnReduceUpgradeTime()
+    {
+        foreach (Village village in Villages.ToArray())
+        {
+            if (village.UpgradeCounter == 1)
+            {
+                village.UpgradeCounter = 0;
+                village.UpgradeLevel +=1;
+            }
+        } 
+        foreach (Village village in this.Villages)
+        {
+            if (village.UpgradeCounter > 1) village.UpgradeCounter -= 1;
+        }
+    }
 }

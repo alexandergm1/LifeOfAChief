@@ -32,6 +32,7 @@ public class GameState
         this.player.Gold += 50;
         this.map.EndTurnReduceConstructionTime();
         this.map.EndTurnCheckBuildFinished();
+        this.map.EndTurnReduceUpgradeTime();
         AdjustPopulationOnTurnEnd();
     }
 

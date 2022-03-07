@@ -123,5 +123,15 @@ public class Player
         }
     }
 
+    public void UpgradeVillage(Village village)
+    {
+        int upgradeCost = (village.UpgradeLevel * 500) + 400;
+        if (this.Gold >= upgradeCost && village.UpgradeCounter == 0)
+        {
+            this.Gold -= upgradeCost;
+            village.StartUpgradeVillage();
+        }
+    }
+
 
 }
