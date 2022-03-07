@@ -555,7 +555,7 @@ GameObject:
   - component: {fileID: 2810398606318810795}
   m_Layer: 5
   m_Name: EventPopup
-  m_TagString: Event
+  m_TagString: Popup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

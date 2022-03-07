@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Events;
 
 public class GameEvent : MonoBehaviour
 {
@@ -51,6 +52,10 @@ public class GameEvent : MonoBehaviour
              Destroy(currentObject);
         }
         Player.Instance.Gold -= 0;
+    }
+
+    public void getGameEventMethods(string optionName){
+        Invoke($"{optionName}", 0.01f);
     }
 
     public static GameEvent InitializeEvent(string title, string content, string option1, string option2, string option3, string method1, string method2, string method3){

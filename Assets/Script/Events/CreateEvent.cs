@@ -11,7 +11,7 @@ public class CreateEvent : MonoBehaviour
     [SerializeField] private Transform EventLocation;
 
     void Start(){
-        EventManager.TestEventPopup += generateEvent;
+        EventManager.EventPopup += generateEvent;
     }
 
     void generateEvent(){
@@ -22,11 +22,15 @@ public class CreateEvent : MonoBehaviour
         Text option1Text = GameObject.Find("Option1 Text").GetComponent<Text>();
         Text option2Text = GameObject.Find("Option2 Text").GetComponent<Text>();
         Text option3Text = GameObject.Find("Option3 Text").GetComponent<Text>();
+        Button Option1 = GameObject.Find("Option1").GetComponent<Button>();
+		Option1.onClick.AddListener(currentEvent.getGameEventMethods(currentEvent.method1));
+
         eventTitle.text = currentEvent.title;
         eventText.text = currentEvent.content;
         option1Text.text = currentEvent.option1;
         option2Text.text = currentEvent.option2;
-        option3Text.text = currentEvent.option2;
+        option3Text.text = currentEvent.option3;
+
     }
 
 }

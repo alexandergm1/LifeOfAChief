@@ -8,15 +8,15 @@ using UnityEngine.EventSystems;
 public class EventManager : MonoBehaviour
 {
 
-    public static event Action TestEventPopup;
+    public static event Action EventPopup;
     public GameObject endTurnButton;
 
 
     void Update()
     {
         if (EventSystem.current.currentSelectedGameObject == endTurnButton)
-        {              
-            TestEventPopup?.Invoke();
+        {
+            EventPopup?.Invoke();
             EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(null);
         }
     }
