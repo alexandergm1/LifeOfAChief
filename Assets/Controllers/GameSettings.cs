@@ -15,10 +15,13 @@ public class GameSettings : MonoBehaviour
     public static Player player { get; set;}
     public static GameState gameState { get; set;}
     public static Map map { get; set;}
+    public static GameEventList eventList { get; set;}
+
 
 
     void Start(){
         map = Map.InitializeMap();
+        eventList = GameEventList.InitializeEventList();
         player = Player.InitializePlayer(playerNameStr);
         player.TakeControlOfVillageFromMap(map, "Village1");
         player.TakeControlOfVillageFromMap(map, "Village2");

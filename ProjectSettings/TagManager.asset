@@ -10,6 +10,8 @@ TagManager:
   - Castle
   - Popup
   - Button
+  - EndTurn
+  - Event
   layers:
   - Default
   - TransparentFX
