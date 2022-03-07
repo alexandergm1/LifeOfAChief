@@ -40,7 +40,7 @@ public class HandleGameOjectOnClicks : MonoBehaviour
  
         if (Physics.Raycast(ray, out hit))
         {
-            GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Popup");
+            GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag("Event");
             foreach(GameObject currentObject in taggedObjects){
                 Destroy(currentObject);
             }
