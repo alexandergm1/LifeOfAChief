@@ -28,7 +28,6 @@ public class HandleGameOjectOnClicks : MonoBehaviour
         villageLevel.text = selectedVillage.UpgradeLevel.ToString();
         villageTax.value = selectedVillage.Tax;
         TaxSlider.village = selectedVillage;
-        // selectedVillage.Tax = Int32.Parse(villageTax.text);
     }
     void createCastle(){
         Instantiate(PopupWindowCastle, Vector3.zero, Quaternion.identity, panel.transform);
