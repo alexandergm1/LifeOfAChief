@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 
 public class CreateEvent : MonoBehaviour
@@ -11,8 +10,6 @@ public class CreateEvent : MonoBehaviour
     [SerializeField] private Transform EventPopup;
     [SerializeField] private Transform panel;
     [SerializeField] private Transform EventLocation;
-    public static Dictionary <string, System.Action> listOfMethods;
-    private UnityAction eventAction;
 
 
     void Start(){
@@ -29,8 +26,7 @@ public class CreateEvent : MonoBehaviour
         Text option2Text = GameObject.Find("Option2 Text").GetComponent<Text>();
         Text option3Text = GameObject.Find("Option3 Text").GetComponent<Text>();
         Button Option1 = GameObject.Find("Option1").GetComponent<Button>();
-        eventAction += listOfMethods[$"{currentEvent.method1}"];
-		Option1.onClick.AddListener(eventAction);
+		Option1.onClick.AddListener(event1method1);
 
         eventTitle.text = currentEvent.title;
         eventText.text = currentEvent.content;
@@ -40,4 +36,15 @@ public class CreateEvent : MonoBehaviour
 
     }
 
+    public void event1method1(){
+        Player.Instance.Gold -= 50;
+        Player.Instance.Lumber -= 50;
+    }
+    public void event1method2(){
+        Player.Instance.Gold -= 25;
+        Player.Instance.Lumber -= 25;
+    }
+    public void event1method3(){
+        Player.Instance.Gold -= 0;
+    }
 }

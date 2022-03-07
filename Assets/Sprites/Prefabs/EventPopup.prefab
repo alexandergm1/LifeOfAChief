@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 2810398604971317561}
   - component: {fileID: 2810398604971317560}
   - component: {fileID: 2810398604971317563}
+  - component: {fileID: 4154544631106400652}
   m_Layer: 5
   m_Name: Option2
   m_TagString: Untagged
@@ -225,7 +226,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2810398604971317560}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4154544631106400652}
+        m_TargetAssemblyTypeName: PopupDestroy, Scripts
+        m_MethodName: DestroyGameObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4154544631106400652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810398604971317565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3e7a41509d9c644a7c2a5acfd7186f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDestroy: {fileID: 2810398606318810796}
 --- !u!1 &2810398605311264234
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +737,7 @@ GameObject:
   - component: {fileID: 2810398606492320541}
   - component: {fileID: 2810398606492320540}
   - component: {fileID: 2810398606492320543}
+  - component: {fileID: 2848437328382828645}
   m_Layer: 5
   m_Name: Option3
   m_TagString: Untagged
@@ -819,7 +846,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2810398606492320540}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2848437328382828645}
+        m_TargetAssemblyTypeName: PopupDestroy, Scripts
+        m_MethodName: DestroyGameObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2848437328382828645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810398606492320513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3e7a41509d9c644a7c2a5acfd7186f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDestroy: {fileID: 2810398606318810796}
 --- !u!1 &2810398606588770448
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +884,7 @@ GameObject:
   - component: {fileID: 2810398606588770540}
   - component: {fileID: 2810398606588770543}
   - component: {fileID: 2810398606588770542}
+  - component: {fileID: 4236248697960691750}
   m_Layer: 5
   m_Name: Option1
   m_TagString: Untagged
@@ -940,4 +993,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2810398606588770543}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4236248697960691750}
+        m_TargetAssemblyTypeName: PopupDestroy, Scripts
+        m_MethodName: DestroyGameObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4236248697960691750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810398606588770448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3e7a41509d9c644a7c2a5acfd7186f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDestroy: {fileID: 2810398606318810796}
