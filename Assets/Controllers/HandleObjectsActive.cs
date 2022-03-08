@@ -19,6 +19,19 @@ public class HandleObjectsActive : MonoBehaviour
     {
         foreach (GameObject village in villages)
         {
+            Debug.Log(village.transform.GetChild(0).gameObject);
+            if (Map.Instance.FindVillageByName(village.name) != null)
+            {
+                if (Map.Instance.FindVillageByName(village.name).UpgradeLevel > 0)
+                {
+                village.transform.GetChild(0).gameObject.SetActive(true);
+                }
+                else village.transform.GetChild(0).gameObject.SetActive(false);
+            }
+        }
+
+        foreach (GameObject village in villages)
+        {
             if (Map.Instance.FindVillageByName(village.name) == null)
             {
             village.SetActive(false);
