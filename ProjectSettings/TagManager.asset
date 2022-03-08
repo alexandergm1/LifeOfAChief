@@ -12,6 +12,7 @@ TagManager:
   - Button
   - EndTurn
   - Event
+  - CampSite
   layers:
   - Default
   - TransparentFX

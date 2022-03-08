@@ -618,6 +618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CampSite4
       objectReference: {fileID: 0}
+    - target: {fileID: 1187968422892738459, guid: c2c9a26845c5349d1a6bcf7195c57551, type: 3}
+      propertyPath: m_TagString
+      value: CampSite
+      objectReference: {fileID: 0}
     - target: {fileID: 1264483520421748064, guid: c2c9a26845c5349d1a6bcf7195c57551, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -772,7 +776,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2.5
+  m_Intensity: 2.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1583,6 +1587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CampSite6
       objectReference: {fileID: 0}
+    - target: {fileID: 1187968422892738459, guid: c2c9a26845c5349d1a6bcf7195c57551, type: 3}
+      propertyPath: m_TagString
+      value: CampSite
+      objectReference: {fileID: 0}
     - target: {fileID: 1264483520421748064, guid: c2c9a26845c5349d1a6bcf7195c57551, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -1639,6 +1647,10 @@ PrefabInstance:
     - target: {fileID: 1187968422892738459, guid: c2c9a26845c5349d1a6bcf7195c57551, type: 3}
       propertyPath: m_Name
       value: CampSite5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187968422892738459, guid: c2c9a26845c5349d1a6bcf7195c57551, type: 3}
+      propertyPath: m_TagString
+      value: CampSite
       objectReference: {fileID: 0}
     - target: {fileID: 1264483520421748064, guid: c2c9a26845c5349d1a6bcf7195c57551, type: 3}
       propertyPath: m_RootOrder
@@ -2948,13 +2960,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992712320}
-  m_LocalRotation: {x: -0.3907013, y: 0.022394968, z: -0.011502499, w: -0.9201732}
+  m_LocalRotation: {x: 0.4615681, y: -0.021808783, z: 0.01306232, w: 0.8867404}
   m_LocalPosition: {x: 313.14752, y: 151.8, z: 435.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 46.017, y: -2.66, z: 0.303}
+  m_LocalEulerAnglesHint: {x: 55, y: -2.66, z: 0.303}
 --- !u!114 &1992712322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3006,7 +3018,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 90.61596
+  field of view: 60
   orthographic: 0
   orthographic size: 164.30505
   m_Depth: -1
@@ -3067,6 +3079,10 @@ PrefabInstance:
     - target: {fileID: 1187968422892738459, guid: c2c9a26845c5349d1a6bcf7195c57551, type: 3}
       propertyPath: m_Name
       value: CampSite 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1187968422892738459, guid: c2c9a26845c5349d1a6bcf7195c57551, type: 3}
+      propertyPath: m_TagString
+      value: CampSite
       objectReference: {fileID: 0}
     - target: {fileID: 1264483520421748064, guid: c2c9a26845c5349d1a6bcf7195c57551, type: 3}
       propertyPath: m_RootOrder
