@@ -13,31 +13,33 @@ public class HandleObjectsActive : MonoBehaviour
         villages = GameObject.FindGameObjectsWithTag("Village");
         buildingSites = GameObject.FindGameObjectsWithTag("BuildingSite");
         campSites = GameObject.FindGameObjectsWithTag("CampSite");
+        foreach (GameObject village in villages)
+        {
+            foreach (Transform child in village.transform.GetChild(0).gameObject.transform)
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
     }
 
     void Update()
     {
         foreach (GameObject village in villages)
-        {
-            Debug.Log(village.transform.GetChild(0).gameObject);
+        { 
             if (Map.Instance.FindVillageByName(village.name) != null)
             {
-                if (Map.Instance.FindVillageByName(village.name).UpgradeLevel > 0)
+                village.SetActive(true);
+                int upgradeLevel = Map.Instance.FindVillageByName(village.name).UpgradeLevel;
+                int n = upgradeLevel;
+                while (n > 0)
                 {
-                village.transform.GetChild(0).gameObject.SetActive(true);
+                    village.transform.GetChild(0).gameObject.transform.GetChild(n - 1).gameObject.SetActive(true);
+                    n -= 1;
                 }
-                else village.transform.GetChild(0).gameObject.SetActive(false);
             }
+            else village.SetActive(false);
         }
 
-        foreach (GameObject village in villages)
-        {
-            if (Map.Instance.FindVillageByName(village.name) == null)
-            {
-            village.SetActive(false);
-            }
-            else village.SetActive(true);
-        }
 
         foreach (GameObject buildingSite in buildingSites)
         {
@@ -54,10 +56,6 @@ public class HandleObjectsActive : MonoBehaviour
             campSite.SetActive(false);
             if (Map.Instance.FindBuildingSiteByName(name) == null) campSite.SetActive(false);
             else if (Map.Instance.FindBuildingSiteByName(name).UnderConstruction == true) campSite.SetActive(true);
-            
-            
-         
-
         }
     }
 }
