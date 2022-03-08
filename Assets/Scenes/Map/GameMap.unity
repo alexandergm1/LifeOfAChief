@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 145597343}
   - component: {fileID: 145597342}
   - component: {fileID: 145597341}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2948,13 +2948,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992712320}
-  m_LocalRotation: {x: -0.3907013, y: 0.022394968, z: -0.011502499, w: -0.9201732}
+  m_LocalRotation: {x: 0.4615681, y: -0.021808786, z: 0.01306232, w: 0.8867405}
   m_LocalPosition: {x: 313.14752, y: 151.8, z: 435.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 46.017, y: -2.66, z: 0.303}
+  m_LocalEulerAnglesHint: {x: 55, y: -2.66, z: 0.303}
 --- !u!114 &1992712322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3006,7 +3006,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 5000
-  field of view: 90.61596
+  field of view: 60.4
   orthographic: 0
   orthographic size: 164.30505
   m_Depth: -1
