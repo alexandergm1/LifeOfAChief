@@ -38,6 +38,7 @@ public class HandleObjectsActive : MonoBehaviour
         foreach (GameObject campSite in campSites)
         {
             string name = "BuildingSite" + campSite.name.Substring(campSite.name.Length-1);
+            campSite.SetActive(false);
             if (Map.Instance.FindBuildingSiteByName(name) == null) campSite.SetActive(false);
             else if (Map.Instance.FindBuildingSiteByName(name).UnderConstruction == true) campSite.SetActive(true);
             
