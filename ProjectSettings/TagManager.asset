@@ -13,6 +13,7 @@ TagManager:
   - EndTurn
   - Event
   - CampSite
+  - TradeShip
   layers:
   - Default
   - TransparentFX
