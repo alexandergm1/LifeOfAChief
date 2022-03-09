@@ -41,8 +41,8 @@ public class HandleGameOjectOnClicks : MonoBehaviour
         Text castlePop = GameObject.Find("Population").GetComponent<Text>();
         Text castleSoldiers = GameObject.Find("Soldiers").GetComponent<Text>();
         castleName.text = selectedCastle.Name;
-        castlePop.text = selectedCastle.Population.ToString();
-        castleSoldiers.text = selectedCastle.Soldiers.ToString();
+        castlePop.text = "Population " + selectedCastle.Population.ToString();
+        castleSoldiers.text = "Soldiers "+ selectedCastle.Soldiers.ToString();
     }
 
     void createBuildingSite(){
