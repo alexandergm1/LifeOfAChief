@@ -84,7 +84,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -126,8 +126,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpSpecMap:
         m_Texture: {fileID: 2800000, guid: 5c56a7bb70c2dbe4e9ab072fd9d6cf81, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailTex:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -139,10 +147,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Cull: 2
     - _Cutoff: 0.3
     - _SquashAmount: 1
+    - _WindQuality: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
@@ -167,8 +178,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpSpecMap:
         m_Texture: {fileID: 2800000, guid: 5c56a7bb70c2dbe4e9ab072fd9d6cf81, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailTex:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -184,13 +203,16 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Cull: 2
     - _Cutoff: 0.41417912
     - _ShadowOffsetScale: 1
     - _ShadowStrength: 1
     - _SquashAmount: 1
     - _TranslucencyViewDependency: 0.7
+    - _WindQuality: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}
     - _TranslucencyColor: {r: 0.84786636, g: 1, b: 0.43867922, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
@@ -383,7 +405,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 3741
-  materialHash: c89018c65f97da93b7dd852574efb6e2215482368
+  materialHash: bdb6cbcfd23976428f1e009b47a4f5ab215482368
   root:
     _uniqueID: 1
     seed: 1866906
