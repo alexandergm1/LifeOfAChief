@@ -115,8 +115,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Bark Material
-  m_Shader: {fileID: 10604, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: 99134b1f0c27d54469a840832a28fadf, type: 3}
+  m_ShaderKeywords: _WINDQUALITY_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -134,6 +134,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 699d39b9ac112554aa0d959c5a00426e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ExtraTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _GlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -142,18 +146,36 @@ Material:
         m_Texture: {fileID: 2800000, guid: c36ffddf910ce3546866afdc6350f8b3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SubsurfaceTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
         m_Texture: {fileID: 2800000, guid: 21c8651b786c25c4ba0ea1d7224a3b85, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AO: 2.4
+    - _BaseLight: 0.35
+    - _BillboardKwToggle: 0
+    - _BillboardShadowFade: 0.5
     - _Cutoff: 0.3
+    - _Glossiness: 0.5
+    - _HueVariationKwToggle: 0
+    - _Metallic: 0
+    - _NormalMapKwToggle: 0
     - _Shininess: 0.078125
     - _SquashAmount: 1
+    - _SubsurfaceIndirect: 0.25
+    - _SubsurfaceKwToggle: 0
+    - _TwoSided: 2
+    - _WindQuality: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
@@ -165,8 +187,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Optimized Leaf Material
-  m_Shader: {fileID: 10605, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 4800000, guid: 99134b1f0c27d54469a840832a28fadf, type: 3}
+  m_ShaderKeywords: _WINDQUALITY_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -176,8 +198,20 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpSpecMap:
         m_Texture: {fileID: 2800000, guid: 699d39b9ac112554aa0d959c5a00426e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ExtraTex:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -188,19 +222,37 @@ Material:
         m_Texture: {fileID: 2800000, guid: fa0dd523aa1bd6a43a3019099e379f93, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SubsurfaceTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _TranslucencyMap:
         m_Texture: {fileID: 2800000, guid: 21c8651b786c25c4ba0ea1d7224a3b85, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _BillboardKwToggle: 0
+    - _BillboardShadowFade: 0.5
+    - _Cull: 2
     - _Cutoff: 0.3516312
+    - _Glossiness: 0.5
+    - _HueVariationKwToggle: 0
+    - _Metallic: 0
+    - _NormalMapKwToggle: 0
     - _ShadowOffsetScale: 1
     - _ShadowStrength: 1
     - _SquashAmount: 1
+    - _SubsurfaceIndirect: 0.25
+    - _SubsurfaceKwToggle: 0
     - _TranslucencyViewDependency: 1
+    - _TwoSided: 2
+    - _WindQuality: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
+    - _HueVariationColor: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}
+    - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TranslucencyColor: {r: 0.8666546, g: 1, b: 0.504717, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
@@ -392,7 +444,7 @@ MonoBehaviour:
   m_Name: Tree Data
   m_EditorClassIdentifier: 
   _uniqueID: 4928
-  materialHash: fdfc30dd511a51ad6009a788a91f7a71-550813696
+  materialHash: a2dfeb45e36ed4bbd689ab231552a1d0-550813696
   root:
     _uniqueID: 1
     seed: 1271726
