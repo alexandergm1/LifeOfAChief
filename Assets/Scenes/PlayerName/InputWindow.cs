@@ -12,6 +12,6 @@ public class InputWindow : MonoBehaviour
 
     public void submit(){
         GameSettings.playerNameStr = playerName.text;
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("GameMap");
     }
 }
