@@ -19,7 +19,7 @@ public class TradeShipButton : MonoBehaviour
         else if (TradeShip.Instance.docked == true) 
         {
             Text TradeBtn = GameObject.Find("Trade").GetComponentInChildren<Text>();
-            TradeBtn.text = "100 Gold = 400 Lumber!";  
+            TradeBtn.text = "100 Lumber = 400 Gold!";  
         }
     }
 

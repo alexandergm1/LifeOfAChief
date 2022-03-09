@@ -10,12 +10,12 @@ public class TradeShipAnimation : MonoBehaviour
     {
         if (TradeShip.Instance.docked == false)
         {
-            myAnimationController.SetBool("ShipSailing", true);
+            myAnimationController.SetBool("Sailing", true);
             myAnimationController.SetBool("Docked", false);
         }
-        else 
+        else if (TradeShip.Instance.docked == true)
         {
-            myAnimationController.SetBool("ShipSailing", false);
+            myAnimationController.SetBool("Sailing", false);
             myAnimationController.SetBool("Docked", true);
         }
     }
