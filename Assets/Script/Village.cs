@@ -61,18 +61,18 @@ public class Village
 
     public static Village InitializeVillage1()
     {
-        return new Village("Village1", 400, TradeGood.LUMBER, 0, 0, 10);
+        return new Village("Kilmuir", 400, TradeGood.LUMBER, 0, 0, 10);
     }
 
 
     public static Village InitializeVillage2()
     {
-        return new Village("Village2", 400, TradeGood.FISH, 0, 0, 10);
+        return new Village("Milovaig", 400, TradeGood.FISH, 0, 0, 10);
     }
 
     public static Village InitializeVillage3()
     {
-        return new Village( "Village3", 400, TradeGood.SEALS, 0, 0, 10);
+        return new Village( "Waternish", 400, TradeGood.SEALS, 0, 0, 10);
     }
 
 }
