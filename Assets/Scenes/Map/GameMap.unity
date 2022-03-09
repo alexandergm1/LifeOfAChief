@@ -1092,7 +1092,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3817772853198578704, guid: 10b21c3f32b1ae2439fa5514439520c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.85
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 3817772853198578704, guid: 10b21c3f32b1ae2439fa5514439520c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3106,6 +3106,7 @@ MonoBehaviour:
   PopupWindowVillage: {fileID: 8607240500171075584, guid: c4943088ffaa9924cbd3edca276477aa, type: 3}
   PopupWindowCastle: {fileID: 7768805212745921232, guid: 70ea73b87888dbe4e858f96e6aa8ecaa, type: 3}
   PopupWindowBuildingSite: {fileID: 6351866233897895265, guid: dde42d53635e69545b37f679ac01e1ea, type: 3}
+  PopupWindowTradeShip: {fileID: 429530248248828753, guid: 456af348bcd18492188431be1523bea4, type: 3}
   panel: {fileID: 804928545}
 --- !u!4 &2019158623
 Transform:
