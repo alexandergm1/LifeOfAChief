@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banners
       objectReference: {fileID: 0}
+    - target: {fileID: 2026803234893419435, guid: d8e813877150a3f43bf1a2f5c1fe9810, type: 3}
+      propertyPath: m_TagString
+      value: BuildingSite
+      objectReference: {fileID: 0}
     - target: {fileID: 6170944748147149270, guid: d8e813877150a3f43bf1a2f5c1fe9810, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -175,6 +179,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2026803234893419435, guid: d8e813877150a3f43bf1a2f5c1fe9810, type: 3}
   m_PrefabInstance: {fileID: 554962643892314647}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &5390883217335949466
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986994911420838332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5907593, y: 2.3284507, z: 0.06535282}
+  m_Center: {x: 0.002951474, y: -1.173207, z: 0.038154047}
 --- !u!114 &2437320229369842222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,19 +210,6 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!65 &5390883217335949466
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986994911420838332}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5907593, y: 2.3284507, z: 0.06535282}
-  m_Center: {x: 0.002951474, y: -1.173207, z: 0.038154047}
 --- !u!1001 &7849768858372334435
 PrefabInstance:
   m_ObjectHideFlags: 0
