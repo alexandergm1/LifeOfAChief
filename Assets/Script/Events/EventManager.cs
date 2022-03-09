@@ -16,12 +16,13 @@ public class EventManager : MonoBehaviour
     void Update()
     {
         float value = Random.value;
-        if (EventSystem.current.currentSelectedGameObject == endTurnButton)
-        {
-            if(value <= 0.4){
-                EventPopup?.Invoke();
+        if (EventSystem.current.currentSelectedGameObject == endTurnButton && value > 0.4){
                 EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(null);
-            }
+        }
+        if(EventSystem.current.currentSelectedGameObject == endTurnButton && value <= 0.4)
+        {
+            EventPopup?.Invoke();
+            EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(null);
         }
     }
 }
