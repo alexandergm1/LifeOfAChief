@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.EventSystems;
+using Random=UnityEngine.Random;
+
 
 public class EventManager : MonoBehaviour
 {
@@ -11,13 +13,15 @@ public class EventManager : MonoBehaviour
     public static event Action EventPopup;
     public GameObject endTurnButton;
 
-
     void Update()
     {
+        float value = Random.value;
         if (EventSystem.current.currentSelectedGameObject == endTurnButton)
         {
-            EventPopup?.Invoke();
-            EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(null);
+            if(value <= 0.4){
+                EventPopup?.Invoke();
+                EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(null);
+            }
         }
     }
 }
