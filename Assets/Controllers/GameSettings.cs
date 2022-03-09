@@ -22,9 +22,9 @@ public class GameSettings : MonoBehaviour
         map = Map.InitializeMap();
         eventList = GameEventList.InitializeEventList();
         player = Player.InitializePlayer(playerNameStr);
-        player.TakeControlOfVillageFromMap(map, "Village1");
-        player.TakeControlOfVillageFromMap(map, "Village2");
-        player.TakeControlOfVillageFromMap(map, "Village3");
+        player.TakeControlOfVillageFromMap(map, "Kilmuir");
+        player.TakeControlOfVillageFromMap(map, "Milovaig");
+        player.TakeControlOfVillageFromMap(map, "Waternish");
         player.TakeControlOfCastleFromMap(map, "Dunvegan");
         TradeShip.InitializeTradeShip();
         gameState = GameState.InitializeGameState(player, map);

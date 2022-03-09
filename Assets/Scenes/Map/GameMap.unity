@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.73023915, g: 0.7889812, b: 0.84985924, a: 1}
+  m_IndirectSpecularColor: {r: 0.7302238, g: 0.7889745, b: 0.8498578, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1014,7 +1014,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 360285726845052899, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_Name
-      value: Village3
+      value: Waternish
       objectReference: {fileID: 0}
     - target: {fileID: 360285726845052899, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_TagString
@@ -1899,7 +1899,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 360285726845052899, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_Name
-      value: Village2
+      value: Milovaig
       objectReference: {fileID: 0}
     - target: {fileID: 360285726845052899, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_TagString
@@ -2136,7 +2136,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 360285726845052899, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_Name
-      value: Village1
+      value: Kilmuir
       objectReference: {fileID: 0}
     - target: {fileID: 360285726845052899, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_TagString
