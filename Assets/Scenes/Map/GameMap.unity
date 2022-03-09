@@ -3320,12 +3320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c8bfa92252bbe45a63a37afe34e6f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panSpeed: 40
-  panBorderThickness: 10
-  panLimit: {x: 1200, y: 1200}
-  scrollSpeed: 100
-  minY: 20
-  maxY: 500
+  movementSpeed: 0.5
+  movementTime: 2
+  newPosition: {x: 0, y: 0, z: 0}
 --- !u!81 &1992712323
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3422,7 +3419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2722935046782c043827a89a9bcc70df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
+  Speed: 2
 --- !u!1001 &2008365116
 PrefabInstance:
   m_ObjectHideFlags: 0
