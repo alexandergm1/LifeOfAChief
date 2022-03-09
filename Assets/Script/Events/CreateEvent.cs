@@ -4,20 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-
-
-
 public class CreateEvent : MonoBehaviour
 {
 
     [SerializeField] private Transform EventPopup;
     [SerializeField] private Transform panel;
     [SerializeField] private Transform EventLocation;
+    public GameObject endTurnButton;
 
-
-    void Start(){
-        EventManager.EventPopup += generateEvent;
-        
+    void Update()
+    {
+        float value = Random.value;
+        if (EventSystem.current.currentSelectedGameObject == endTurnButton && value > 0.4){
+                EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(null);
+        }
+        if(EventSystem.current.currentSelectedGameObject == endTurnButton && value <= 0.4)
+        {
+            Invoke("generateEvent", 1.9f);
+            EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(null);
+        }
     }
 
     void generateEvent(){
@@ -91,5 +96,6 @@ public class CreateEvent : MonoBehaviour
     public void callMethod(string methodName){
         Invoke(methodName, 0.001f);
     }
+
 
 }
