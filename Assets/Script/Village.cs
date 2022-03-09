@@ -41,17 +41,17 @@ public class Village
 
     public int CalculatePopTax()
     {
-        return (int)(this.Population * ((float) this.Tax/100) * ((this.UpgradeLevel * 0.2) + 1));
+        return (int)(this.Population * ((float) this.Tax/50) * ((this.UpgradeLevel * 0.2) + 1));
     }
 
     public int CalculateResourceIncome()
     {
-        return (int) (this.tradeGood != TradeGood.LUMBER ? (int) (this.Population * 0.5 * (int) this.tradeGood) * ((this.UpgradeLevel * 0.2) + 1) : (int) 0);
+        return (int) (this.tradeGood != TradeGood.LUMBER ? (int) (this.Population * 0.05 * (int) this.tradeGood) * ((this.UpgradeLevel * 0.2) + 1) : (int) 0);
     }  
 
     public int CalculateLumberIncome()
     {
-        return (int) (this.tradeGood == TradeGood.LUMBER ? (int) (this.Population * 0.3 * ((this.UpgradeLevel * 0.2) + 1)) : (int) 0);
+        return (int) (this.tradeGood == TradeGood.LUMBER ? (int) (this.Population * 0.4 * ((this.UpgradeLevel * 0.2) + 1)) : (int) 0);
     }      
 
     public void StartUpgradeVillage()

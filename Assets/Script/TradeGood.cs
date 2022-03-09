@@ -4,10 +4,9 @@ using UnityEngine;
 
 public enum TradeGood
 {
-    FISH=5,
-    SEALS=10,
-    SEAWEED=15,
-    WHISKY=20,
-    LUMBER=20
-
+    FISH=1,
+    SEALS=2,
+    SEAWEED=3,
+    WHISKY=4,
+    LUMBER=5
 }
