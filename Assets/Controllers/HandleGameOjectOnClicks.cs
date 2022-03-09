@@ -12,6 +12,7 @@ public class HandleGameOjectOnClicks : MonoBehaviour
     [SerializeField] private Transform PopupWindowVillage;
     [SerializeField] private Transform PopupWindowCastle;
     [SerializeField] private Transform PopupWindowBuildingSite;
+    [SerializeField] private Transform PopupWindowTradeShip;
     [SerializeField] private Transform panel;
     public Village selectedVillage;
     public Castle selectedCastle;
@@ -53,6 +54,14 @@ public class HandleGameOjectOnClicks : MonoBehaviour
         Colonise.buildingSite = selectedBuildingSite;
     }
 
+    void createTradeShip(){
+        Instantiate(PopupWindowTradeShip, Vector3.zero, Quaternion.identity, panel.transform);
+        Text TradeShipName = GameObject.Find("EntityName").GetComponent<Text>();
+        Text TradeShipTradeGood = GameObject.Find("Trade Good").GetComponent<Text>();
+        TradeShipName.text = "TradeShip (Lvl 0)";
+        TradeShipTradeGood.text = "Trading Lumber";
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -81,6 +90,10 @@ public class HandleGameOjectOnClicks : MonoBehaviour
             {
                 selectedCastle = Map.Instance.FindCastleByName(hit.collider.gameObject.name);
                 Invoke("createCastle", 0.001f);
+            }
+            else if (hit.collider.gameObject.tag == "TradeShip")
+            {
+                Invoke("createTradeShip", 0.001f);
             }
             else if (hit.collider.gameObject.tag == "BuildingSite")
             {

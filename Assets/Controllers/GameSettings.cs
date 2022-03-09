@@ -16,8 +16,7 @@ public class GameSettings : MonoBehaviour
     public static GameState gameState { get; set;}
     public static Map map { get; set;}
     public static GameEventList eventList { get; set;}
-
-
+    public static TradeShip tradeShip { get; set;}
 
     void Start(){
         map = Map.InitializeMap();
@@ -27,6 +26,7 @@ public class GameSettings : MonoBehaviour
         player.TakeControlOfVillageFromMap(map, "Village2");
         player.TakeControlOfVillageFromMap(map, "Village3");
         player.TakeControlOfCastleFromMap(map, "Dunvegan");
+        TradeShip.InitializeTradeShip();
         gameState = GameState.InitializeGameState(player, map);
         ClickBuilding.player = player;
         Name.text = player.Name.ToString();

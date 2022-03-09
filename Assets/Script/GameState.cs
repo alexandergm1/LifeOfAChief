@@ -34,6 +34,7 @@ public class GameState
         this.map.EndTurnCheckBuildFinished();
         this.map.EndTurnReduceUpgradeTime();
         AdjustPopulationOnTurnEnd();
+        TradeShip.Instance.docked = true;
     }
 
     public void AdjustPopulationOnTurnEnd(){
