@@ -12,6 +12,8 @@ public class GameSettings : MonoBehaviour
     public Text Name;
     public Text Lumber;
     public Text Gold;
+    public Text Week;
+    public DateTime StartDate = new DateTime (2022, 3, 10);
     public static Player player { get; set;}
     public static GameState gameState { get; set;}
     public static Map map { get; set;}
@@ -38,6 +40,7 @@ public class GameSettings : MonoBehaviour
 
     void Update()
     {
+        Week.text = StartDate.AddDays(gameState.Turn * 7).ToShortDateString();
         Gold.text = player.Gold.ToString();
         Lumber.text = player.Lumber.ToString();
     }
