@@ -62,7 +62,32 @@ public class CreateEvent : MonoBehaviour
     public void event2method3(){
         Player.Instance.villages[0].Population -= 150;
     }
+    public void event3method1(){
+        Player.Instance.Gold += 200;
+    }
+    public void event3method2(){
+        Player.Instance.castles[0].Soldiers += 100;
+    }
+    public void event3method3(){
+        foreach(Village village in Player.Instance.villages){
+            village.Population += 100;
+        }
+    }
+    public void event4method1(){
+        Player.Instance.Gold += 100;
+        Player.Instance.Lumber -= 50;
+        Player.Instance.villages[2].Population -= 50;
+    }
+    public void event4method2(){
+        
+    }
+    public void event4method3(){
+        Player.Instance.castles[0].Soldiers -= 25;
+        Player.Instance.Gold += 200;
+    }
     
+
+
     public void callMethod(string methodName){
         Invoke(methodName, 0.001f);
     }
