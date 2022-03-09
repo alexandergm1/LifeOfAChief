@@ -9,7 +9,7 @@ public class RotateCamera : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButton(1))
         {
             transform.eulerAngles += Speed * new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
         }
