@@ -47,9 +47,7 @@ public class HandleGameOjectOnClicks : MonoBehaviour
 
     void createBuildingSite(){
         Instantiate(PopupWindowBuildingSite, Vector3.zero, Quaternion.identity, panel.transform);
-        Text BuildingSiteName = GameObject.Find("EntityName").GetComponent<Text>();
         Text BuildingSiteTradeGood = GameObject.Find("Trade Good").GetComponent<Text>();
-        BuildingSiteName.text = selectedBuildingSite.Name;
         BuildingSiteTradeGood.text = "Trade Good - " + selectedBuildingSite.tradeGood.ToString();
         Colonise.buildingSite = selectedBuildingSite;
     }
