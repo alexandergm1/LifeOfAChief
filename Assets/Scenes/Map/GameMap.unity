@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.7302238, g: 0.7889745, b: 0.8498578, a: 1}
+  m_IndirectSpecularColor: {r: 0.73023915, g: 0.7889812, b: 0.84985924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2238,7 +2238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4522515995022971929, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6000001
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4522515995022971929, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2246,7 +2246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4522515995022971929, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9582828
+      value: 0.99171394
       objectReference: {fileID: 0}
     - target: {fileID: 4522515995022971929, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2254,7 +2254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4522515995022971929, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.28582168
+      value: -0.12846619
       objectReference: {fileID: 0}
     - target: {fileID: 4522515995022971929, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2266,7 +2266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4522515995022971929, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -33.216
+      value: -14.762
       objectReference: {fileID: 0}
     - target: {fileID: 4522515995022971929, guid: 089624c3118c944a8a216d2433a82413, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2969,6 +2969,7 @@ GameObject:
   - component: {fileID: 1836378513}
   - component: {fileID: 1836378515}
   - component: {fileID: 1836378514}
+  - component: {fileID: 1836378516}
   m_Layer: 0
   m_Name: Skye
   m_TagString: Untagged
@@ -3034,6 +3035,20 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
+--- !u!114 &1836378516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836378512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33270e4821ec54703a738da306c1dd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_terrain: {fileID: 1836378515}
+  DrawDistance: 900
 --- !u!1 &1912005972
 GameObject:
   m_ObjectHideFlags: 0
